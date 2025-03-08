@@ -1,0 +1,23 @@
+# log and auxiliary files
+*.log
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.log
+*.run.xml
+*.synctex.gz
+*.toc
+*.out
+*.swp
+*.swo
+*~
+*.bak
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+
+# text files
+*.docx
+

@@ -7,11 +7,7 @@
 \documentclass[10pt,twoside,a4paper]{report}
 
 % ETHASL package
-% TODO Choose options according to your project
-% som/bt/st/mt: Studies on Mechatronics, Bachelor Thesis, Semester Thesis, Master Thesis
-% fs/hs: Spring term, Autumn term
-% german/english: German/English
-\usepackage[bt,hs,english]{packages/ethasl}
+\usepackage[bt,hs,english]{ethasl}
 
 % Activate for german language
 %\usepackage{german}
@@ -27,23 +23,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-% TODO Add your title
 \title{Automating Scan-to-BIM for Telecom Site Planning}
 \subtitle{A Comparative Analysis and Case Study}
-
-% TODO Add name of the authors
 \studentA{Jeffrey Leisi}
-%\studentB{Student 2}
-%\studentC{Student 3}
-
-% TODO Add name of the supervisors
-\supervisionA{Océane Durand Maniclas}
-\supervisionB{Kasimir Forth}
-%\supervisionC{Supervisor C}
-
-% TODO Change if necessary
-\projectYear{\the\year} % This year
-%\projectYear{\advance\year by -1 \the\year\advance\year by 1} % Last year
+\supervisionA{Océane Durand-Maniclas (ETH Zürich)}
+\supervisionB{Kasimir Forth (ETH Zürich)}
+\supervisionC{Jean-Charles Schaegis (Axians Schweiz AG)}
+\projectYear{\the\year} % Year of the project presentation
 
 \maketitle
 \pagestyle{plain}
@@ -103,17 +89,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Bibliography
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\bibliographystyle{bibliography/IEEEtranN}
-\bibliography{bibliography/references}
-\addcontentsline{toc}{chapter}{Bibliography}
+\nocite{*}
+\printbibliography
 \cleardoublepage
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Appendix
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
-\input{chapters/appendix_text}
-\cleardoublepage
-\input{chapters/appendix_datasheets}
+%\input{chapters/appendix_text}
+%\cleardoublepage
+%\input{chapters/appendix_datasheets}
 
 \end{document}
