@@ -1,46 +1,115 @@
 \chapter{Introduction}
 \label{sec:introduction}
 
-"Global construction has a productivity problem" \cite{barbosaReinventingConstructionRoute2017}. The construction industry is one of the largest economic sectors, yet its productivity has stagnated for decades. In the two decades from 1995 to 2015, its productivity grew by only 1\%, far below the global economy's average of 2.8\%. \\
-% Konventionelle Planung
-Als einer der Gründe gilt die geringe Automatisierung der Planung. Um die jahrtausendwende wurden flächendeckend Computer aided design (CAD) eingeführt. Es handelte sich um eine evolutionäre innovation, bei der die konventionelle planung digitalisiert wurde. Das manuelle Zeichnen am reissbrett wurde durch manuelles zeichnen am computer ersetzt, die einzelnen arbeitsschritte blieben weitgehnd dieselben. Bei der konventionelle planung wird ein reales objekt induktiv durch einzelne, zweidimensionale zeichnungen (z.B. grundriss, schnitt, detail) abgebildet. Die zeichnungen werden oft als seperate datei (z.B. dwg, dxf) gespeichert und sind weder geometrisch noch semantisch miteinander verbunden. änderungen am realen objekt müssen in allen zeichnungen manuell vorgenommen werden. \\
-% Modellbasierte Planung
-Um eine disruptive innovation handelte es sich hingegegen bei BIM.  
-
-BIM-Planung: rachte eine disruptive digitalisierung. Es wird ein einheitliches, digitales Modell als Grundlage erstellt. Gebäudeteile (Geometrie) wird mit Information (Semantik) verknüpft.
-
-% Kurze Einführung Scan-to-BIM
-
-% Kurze Einführung Telecom Site Planning
-
 \section{Background and Motivation}
-TODO: Explain the problem and why it is important. \cite{borrusoProceduralPointCloud2023}
-% - Describe current challenges in telecom site planning.
-% - Highlight the inefficiencies of manual BIM model creation.
-% - Justify the need for automation and its potential benefits.
+The construction industry is one of the largest economic sectors, yet its productivity has stagnated for decades. In the two decades from 1995 to 2015, its productivity grew by only 1\%, far below the global economy's average of 2.8\%. One of the reasons cited is the low level of automation \cite{barbosaReinventingConstructionRoute2017}.
+
+% Konventionelle Planung
+\begin{comment}
+Als einer der Gründe wird die geringe Automatisierung genannt. Bis zur Jahrtausendwende war die Bauplanung weitgehendst digitalisiert, insbesondere durch den Einsatz von Computer Aided Design (CAD) für die Erstellung von Bauzeichnungen. Es handelte sich um eine evolutionäre innovation, bei der die konventionelle planung optimiert wurde. Das manuelle Zeichnen am reissbrett wurde durch manuelles zeichnen am computer ersetzt, die einzelnen arbeitsschritte blieben weitgehnd dieselben. Bei der konventionelle planung wird ein reales objekt induktiv durch einzelne, zweidimensionale zeichnungen (z.B. grundriss, schnitt, detail) abgebildet. Die zeichnungen werden oft als isolierte dateien (z.B. dwg, dxf) gespeichert und sind dabei weder geometrisch noch semantisch miteinander verknüpft. änderungen am realen objekt müssen in allen zeichnungen manuell vorgenommen werden. \\
+\end{comment}
+\subsection{Conventional Planning with CAD}
+Until the turn of the millennium, construction planning had been largely digitized, primarily through the use of Computer-Aided Design (CAD) for creating construction drawings. This represented an evolutionary innovation, optimizing conventional planning methods. Manual drafting on the drawing board was replaced by manual drafting on the computer, while the individual work steps remained largely the same. In conventional planning, a real object is inductively represented by individual two-dimensional drawings (e.g., floor plan, section, detail). These drawings are often stored as isolated files (e.g., DWG, DXF) and are neither geometrically nor semantically linked. Any changes to the real object must be manually updated in all drawings. \\
+
+% Modellbasierte Planung
+\begin{comment}
+Ab der Jahrtausendwende begann sich Building Information Modelling (BIM) zu verbreiten. Es handelte sich um eine disruptive innovation, bei der die bisherigen arbeitsschritte grundlegend verändert wurden. in diesem zusammenhng wird BIM sowohl für die technik (software) als auch für die arbeitsweise (prozesse) verwendet. bei der modellbasierten planung wird ein dreidimensionales modell als digitales abbild des realen objekts erstellt. die zweidimensionalen zeichnungen werden anschliessend deduktiv aus dem modell abgeleitet. das modell wird als einheitliche datei (z.b. ifc) gespeichert und enthält sowohl geometrie als auch semantik. änderungen am modell werden automatisch in allen zeichnungen übernommen. \\
+Vorreiterrollen bei der Implementierung von BIM haben die skandinavischen Länder sowie grossbritanien. die implementierung der technologie gestaltete sich in der schweiz schwierig. Im Jahr 2021 wurde gerademal bei 20\% der Schweizer Bauunternehmen BIM eingesetzt (DE: 70\%, UK: 80\%). Die schweiz befindet sich damit im europäischen vergleich knapp im durchschnitt. \cite{heinrichSchweizImBIMEuropavergleich2022}. Unter anderem führte die fragmentierte Bauwirtschaft und der hohhe wettbewerbsdruck dazu, dass besonders kleinere Unternehmen die anfänglich hohen investitionskosten scheuten. \cite{ivanicErfolgreicheEinfuehrungBuilding2020}. \\
+\end{comment}
+\subsection{model-based planning with BIM}
+At the turn of the millennium, Building Information Modeling (BIM) began to gain traction. It represented a disruptive innovation that fundamentally changed previous workflows. In this context, BIM refers to both the technology (software) and the methodology (processes). In model-based planning, a three-dimensional model is created as a digital representation of the real object. The two-dimensional drawings are then deductively derived from the model. The model is stored as a unified file (e.g., IFC) and contains both geometry and semantics. Any changes made to the model are automatically reflected in all drawings. \\
+Scandinavian countries and the United Kingdom have taken leading roles in the implementation of BIM. However, integrating the technology in Switzerland has proven challenging. By 2021, only 20\% of Swiss construction companies had adopted BIM, compared to 70\% in Germany and 80\% in the UK. This places Switzerland slightly above the European average. \cite{heinrichSchweizImBIMEuropavergleich2022}. Among the factors contributing to this slow adoption are the fragmented nature of the construction industry and high competitive pressure, which led smaller companies, in particular, to shy away from the initially high investment costs. \cite{ivanicErfolgreicheEinfuehrungBuilding2020}. \
+
+% Mobilfunkplanung
+\begin{comment}
+in der schweizer telekommunikationsbranche wurde das potential der modellbasierten planung erkannt. für die bewirtschaftung der knapp 20000 mobilfunkanlagen wird zunehmend auf BIM gesetzt \cite{federalofficeofcommunicationsofcomLocationsMobilePhone}. Während in der klassischen baubranche meist mit einzelnen, grossen bauprojekten gearbeitet wird, arbeitet die telekommunikationsbranche mit einer grossen anzahl kleinerer projekten. daraus lassen sich unterschiedliche anforderungen an die gebäudemodelle ableiten. Während in der klassischen baubranche ein qualitativ hochstehendes und detailiertes modell der gebäudegesamtstruktur benötigt wird, ist dies in der telekommunikationsbranche ein effizient generiertes modell der aussenstruktur. während BIM in der klassischen baubranche noch immer primär für neubauten zur anwendung kommt, werden mobilfunkanlagen in der regel in bestandsbauten integriert. die effiziente erfassung von bestandsbauten eröffnete ein forschunsggebiet, das nach wie vor aktiv erforscht wird.\\
+\end{comment}
+\subsection{Telecommunications Planning}
+The Swiss telecommunications industry has recognized the potential of model-based planning. BIM is increasingly being used for the management of approximately 20000 mobile network sites \cite{federalofficeofcommunicationsofcomLocationsMobilePhone}. While the traditional construction sector typically focuses on large, individual building projects, the telecommunications industry operates with a high volume of smaller projects. This results in different requirements for building models. \\
+Whereas the conventional construction industry demands high-quality, detailed models of entire building structures, the telecommunications sector prioritizes efficiently generated models of exterior structures. While BIM is still primarily applied to new construction projects in the traditional building industry, mobile network installations are usually integrated into existing buildings. The efficient capture of existing buildings has opened up a research field that continues to be actively explored.
+
+% Scan-to-BIM
+\begin{comment}
+Der prozess, bei dem ein physisches objekt mittels terrestrischem laserscanning oder photogrammetrie in ein bim modell (as-is BIM) überführt wird, wird in der literatur häufig als scan-to-BIM bezeichnet (reverse engineering). während der erfassungsvorgang relativ schnell geschieht, kann die nachbearbeitung der punktwolken bei manueller modellierung zeitaufwändig werden. für eine effizienzsteigerung sind automatisierte verfahren gefragt.
+\end{comment}
+\subsection{Scan-to-BIM}
+The reverse engineering process of converting a physical object into a BIM model (as-is BIM) using terrestrial laser scanning or photogrammetry is commonly referred to in the literature as Scan-to-BIM. While the data acquisition process is relatively fast, the post-processing of point clouds can become time-consuming when performed manually. To enhance efficiency, automated methods are required.
 
 \section{Research Objectives and Questions}
-TODO: Clearly define the purpose of the research. \cite{mayBIMImImmobilienbetrieb2022}
-% - What is the main goal of this thesis?
-% - Outline the specific research questions or hypotheses.
+\begin{comment}
+Sowohl BIM als auch scan-to-BIM wurden wurden in den letzten jahren intensiv erforscht \cite{rochaSurveyScantoBIMPractices2021}. \\
+Ebenfalls stark erforscht wurde surface modelling in der computer vision und computergrafik. dabei handelt es sich um die allgemeine rekonstruktion von objektoberflächen aus punktwolken in der computer vision und computergrafik \cite{nanPolyFitPolygonalSurface2017}. \\
+es gibt viele bereits entwickelte algorithmen, die sich für die modellierung von punktwolkendaten eignen könnten. Einige existieren als Code, andere wurden bereits als plugin für BIM software implementiert. die algorithmen haben jeweils einen unterschiedlichen fokus und eignen sich für unterschiedliche anwendungen. die überischt zu bewahren ist schwierig. ein dominierender algorithmus, der in sätmlichen anwendungsfällen und die besten ergebnisse liefert, konnte nicht identifiziert werden. im rahmen der arbeit sollen daher in einem ersten teil unterschiedliche algorithmen verglichen werden. in einem zweiten teil soll der erfolgsversprechendste ansatz anschliessend praxisnah implementiert werden und handlungsempfehlungen an die hand gegeben werden. es werden daraus folgende forschungsfragen abgeleitet:\\
+
+\begin{itemize}
+    \item \textbf{Forschungsfrage 1:} Welcher Algorithmus ist für eine praxisorientierte Implementierung eines Scan-to-BIM ablaufs am erfolgsversprechendsten?
+    \item \textbf{Forschungsfrage 2:} Wie kann der erfolgsversprechendste Algorithmus die effizienz eines bestehenden Can-to-BIM ablauf verbessern?
+\end{itemize}
+\end{comment}
+Both BIM and Scan-to-BIM have been extensively researched in recent years \cite{rochaSurveyScantoBIMPractices2021}.
+Surface modeling has also been a major research focus in the fields of computer vision and computer graphics, specifically in the general reconstruction of object surfaces from point clouds \cite{nanPolyFitPolygonalSurface2017}.
+
+There are numerous existing algorithms that could be suitable for modeling point cloud data. Some of these algorithms are available as open-source code, while others have already been implemented as plugins for BIM software. Each algorithm has a different focus and is suited for specific applications, making it challenging to maintain an overview of the available options. So far, no dominant algorithm has been identified that consistently delivers the best results across all use cases.
+
+As part of this study, the first phase will involve comparing various algorithms. In the second phase, the most promising approach will be implemented in a practical setting, and concrete recommendations for its application will be provided.
+
+The following research questions are derived from this approach:
+
+\begin{itemize}
+    \item \textbf{Research Question 1:} Which algorithm is the most promising for a practical implementation of a Scan-to-BIM workflow?
+    \item \textbf{Research Question 2:} How can the most promising algorithm improve the efficiency of an existing Scan-to-BIM workflow?
+\end{itemize}
+
+
 
 \section{Scope and Limitations}
-TODO: Define the boundaries of the study. \cite{nanPolyFitPolygonalSurface2017}
+TODO: Define the boundaries of the study.
 % - What aspects are included (e.g., point cloud processing, automation)?
 % - What is outside the scope (e.g., full-scale deployment, financial analysis)?
 
 \section{Methodology Overview}
-TODO: Briefly outline the research approach. \cite{wangApplicationOrientedScantoBIM2019}
-% - Summarize the methodology without going into full detail.
-% - Mention key processes (e.g., data acquisition, algorithm testing, validation).
-% - Refer to the methodology chapter for an in-depth explanation.
+\begin{comment}
+Für die Beantwortung der Forschungsfragen wird die arbeit in zwei teile unterteilt. im ersten teil wird die erste forschungsfrage mit einer vergleichenden studie beantwortet. im zweiten teil wird die zweite Forschungsfrage durch eine praxisorientierten implementierung beantwortet. \\
+\end{comment}
+To address the research questions, the study is divided into two parts. The first part answers the first research question through a comparative study. The second part addresses the second research question through a practical implementation.
+
+\subsection{Part 1: Comparative Analysis}
+\begin{comment}
+Im ersten Schritt werden verschiedene Algorithmen zur Verarbeitung von Punktwolken hinsichtlich ihrer Eignung für die Automatisierung der BIM-Modellierung untersucht. Die Bewertung erfolgt anhand folgender Kriterien:
+\end{comment}
+In the first step, various algorithms for processing point clouds will be analyzed regarding their suitability for automating BIM modeling. The evaluation will be based on the following criteria:
+
+TODO: Add more details on algorithm
+TODO: Add more details on the criteria.
+
+\subsection{Part 2: Case Study}
+\begin{comment}
+Nach der Analysephase wird der leistungsfähigste Algorithmus in einem realen Projekt implementiert.
+\end{comment}
+After the analysis phase, the most efficient algorithm will be implemented in a real-world project. 
+
+TODO: Add more details on the implementation steps.
+
 
 \section{Thesis Structure}
-TODO: Provide a brief overview of the chapters.
-% - Explain what each chapter covers to guide the reader.
-% - Example: "Chapter 2 presents the literature review, Chapter 3 outlines the methodology, etc."
+\begin{comment}
+es wurde versucht, die zweiteilung der arbeit auch in der struktur wiederzuspiegeln. da die implementierung auf der analyse aufbaut, bietet sich ein linearer aufbau an. dies bringt den den vorteil, dass innerhalb der kapitel nicht zwischen den unterschiedlichen teilen unterschieden werden muss. der leser weiss dadurch klar, wo er sich befindet und was er erwarten darf.
+\end{comment}
+An effort was made to reflect the two-part structure of the study in its overall organization. Since the implementation builds upon the analysis, a linear structure was chosen. This approach offers the advantage that no distinction needs to be made between the different parts within individual chapters. As a result, the reader clearly understands their current position in the document and knows what to expect next. 
 
-% General Advice:
-% - Keep the introduction concise but informative.
-% - Avoid technical details that belong in later chapters.
-% - Make it engaging and explain why the research matters.
+\subsection{Part 1: Comparative Analysis}
+\begin{comment}
+Zunächst werden im kapitel 2 mit einer literaturanalyse die relevanten algorithmen wertneutral identifiziert und beschrieben. Anschliessend werden im kapitel 3 die algorithmen verglichen und bewertet. es werden anwendungsgebiete bestimmt, wofür sich die algorithmen besonders eignen. diese dient als grundlage für den zweiten teil.
+\end{comment}
+First, in Chapter 2, a literature review is conducted to neutrally identify and describe the relevant algorithms. Subsequently, in Chapter 3, these algorithms are compared and evaluated. Their respective areas of application are determined, identifying which use cases they are particularly suited for. This serves as the foundation for the second part of the study.
+
+
+\subsection{Part 2: Case Study}
+\begin{comment}
+der zweite teil behandelt ein fallbeispiel aus der praxis und entstand in zusammenarbeit mit axians schweiz ag, einem führenden anbieter schlüsselfertiger mobilfunkanlagen der schweiz. dieser teil enthält den wissenschaftlich relevante teil dieser zusammenarbeit. in kapitel 4 wird zunächst das ausgangsproblem des fallbeispiels identifiziert. Im kapitel 5 wird anschliessend auf die resultate der implementierung eingegangen. der weg dahin wird auf \href{https://github.com/JeffreyLeisi/Scan-to-BIM-for-Telecom-Sites/tree/main/01-Report/tex}{GitHub} ausführlich beschrieben. hier soll lediglich kurz aufgezeigt werden, wie der erfolgsversprechendste algorithmus in der praxis angewendet wurde und welche ergebnisse erzielt wurden. abschliessend werden im kapitel 6 die ergebnisse zusammengefasst und ein ausblick auf zukünftige forschung gegeben.
+\end{comment}
+The second part focuses on a practical case study, developed in collaboration with Axians Schweiz AG, a leading provider of turnkey mobile network installations in Switzerland. This section presents the scientifically relevant aspects of this collaboration.
+
+In Chapter 4, the initial problem of the case study is identified. Chapter 5 then discusses the results of the implementation. The detailed process leading to these results is documented on \href{https://github.com/JeffreyLeisi/Scan-to-BIM-for-Telecom-Sites/tree/main/01-Report/tex}{GitHub}. This section provides only a brief overview of how the most promising algorithm was applied in practice and what results were achieved.
+
+Finally, in Chapter 6, the findings are summarized, and an outlook on future research directions is provided.

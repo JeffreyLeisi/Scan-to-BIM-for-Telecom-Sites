@@ -17,6 +17,7 @@
 *.lot
 *.fls
 *.fdb_latexmk
+*.bbl-SAVE-ERROR
 
 # text files
 *.docx
