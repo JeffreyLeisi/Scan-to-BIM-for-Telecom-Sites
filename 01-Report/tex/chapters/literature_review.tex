@@ -10,7 +10,61 @@ TODO: Introduce the purpose of the literature review.
 TODO: Introduction BIM. Explain most relevant concepts and applications.
 
 \section{Telecom Site Planning}
-TODO: Introduction Telecom Site Planning
+
+% Gründe für Anstieg
+\subsection{Internationale Lage}
+% Weltlage -> Es braucht mehr Antennen
+Der gesamte mobile Datenverkehr nimmt weltweit exponentiell zu. Bis ungefähr 2020 verdoppelte sich der Verkehr etwa alle zwei Jahre. Für die Zeit bis 2030 werden noch immer jährliche Wachstumsraten von durchschnittlich 19 \% prognostiziert. Derzeit werden 34 \% des mobilen Datenverkehrs über 5G-Netzwerke abgewickelt. Bis 2030 soll dieser Anteil auf 80 \% steigen.
+
+Zum Anstieg entscheidend beigetragen haben Video-Streaming mit immer höheren Bildschirmauflösungen (4K, 8K), das mitlerweile 74 \% des mobilen Datenverkehrs ausmacht. Haupttreiber des zukünftigen Wachstums wird besonders in den Bereichen des autonomen Fahren, Extended Reality, Industrie 4.0 sowie generativer KI gesehen. 
+Fixed Wireless Access (FWA) wird stark an bedeutung gewinnen und bis 2030 mit 36 \% einen erheblichen Anteil des Datenverkehrs ausmachen. Dabei werden stationäre Geräte (z. B. Computer) über ein CPE-Gerät mit einer festen Breitbandverbindung versorgt, die über mobile Netzwerke (4G/5G) bereitgestellt wird. Besonders in wirtschaftlich schwächer entwickelten Regionen wird FWA traditionelle Festnetzanschlüsse zunehmend als kostengünstigere Alternative verdrängen. \cite{EricssonMobilityReport}
+
+% Schweizlage -> Standorte
+\subsection{Nationale Lage}
+In der Schweiz vertritt der Bund die Ansicht, dass eine leistungsfähige Telekommunikationsinfrastruktur für die Wirtschaft und Gesellschaft einen hohen Stellenwert hat. Ein rascher Ausbau leistungsfähriger 5G Netze sei deshalb wichtig. Nach Angaben der drei Betreiber sind dafür 7'500 neue Antennenstandorte und Investitionen in der Höhe von 3.2 Milliarden Franken notwendig. \cite{bundesratNachhaltigesMobilfunknetzBericht2022}
+
+Ihr Marktanteil nach Kundenanzahl lag Ende 2023 bei Swisscom 54.3 \%, bei Sunrise 23.6 \% und bei Salt 17.1 \% \cite{bakomMarktanteileMobilfunknetz}. Die Marktdurchdringung betrug 128.9 \%. Damit gibt es mehr aktive Simkarten als Einwohner. \cite{bakomAnzahlMobilfunkkundinnenUnd}.
+
+% Mobilfunktechnologien
+\subsection{Entwicklung der Mobilfunkgenerationen und Strahlenschutzregelungen}
+Ungefähr alle zehn Jahre wird eine neue Mobilfunkgeneration eingeführt. Diese haben jeweils eine höhere Datenübertragungsrate, eine geringere Latenz und eine höhere Anzahl an gleichzeitig verbundenen Geräten. Bis zur Einführung der sechten Generation (6G Vision, ca. 2030) wird derzeit die fünfte Generation (5G) ausgebaut. Ebenfalls praxisrelevant ist die vierte Generation (LTE), die ab 2012 ausgebaut wurde. Die dritte Generation (UMTS) wird als erstes von Swisscom auf Ende 2025 eingestellt \cite{swisscomAbschaltung3GErneuerung}. Die zweite Generation (GSM) wurde von den drei Anbeitern zwischen 2020 und 2023 eingestellt.
+Zum Schutz der Bevölkerung vor wissenschaftlich nachgeweisenen Schäden aufgrund nichtionisierender Strahlung (NIS), hat die International Commission on Non-Ionizing Radiation Protection (ICNIRP) empfohlene Grenzwerte definiert. Diese wurden vom Bund in der Verordnung über den Schutz vor nichtionisierender Strahlung (NISV) als Immissionsgrenzwerte übernommen und entsprechen der Empfehlung der EU. Diese müssen an allen Orten eingehalten werden, an denen sich Menschen aufhalten können. Aufgrund gesundheitlicher Bedenken, wurden sogenannte Anlagegrenzwerte definiert \cite{baumannMitVerordnungUeber2005}. Dieser verschärfte Grenzwert beträgt noch 10 \% des Immissionsgrenzwert und muss an Orten mit empfindlicher Nutzung (OMEN) eingehalten werden. Dies sind Bereiche, von denen auszugehen ist, dass sich Menschen regelmässig über längere Zeit aufhalten. Die elektrische Feldstärke beträgt dort ein Zehntel des in Deutschland und Frankreich zulässigen Wertes. Die Leistung einer elektromagnetischen Welle ist dabei proprtional zum Quadrat der elektrischen Feldstärke. Eine um Faktor 10 reduzierte Feldstärke, führt damit zu einer um Faktor 100 sinkenden Sendeleistung \cite{chance5gAnlagegrenzwerteImMobilfunk}.
+Sobald eine Anlage die maximal zulässige Sendeleistung erreicht hat, kann diese nicht mehr weiter ausgebaut werden. Zur Erhöhung der Netzkapazität muss das bestehende Mobilfunknetz dann ausgebaut werden \cite{bundesratNachhaltigesMobilfunknetzBericht2022}.
+
+% Netzstruktur
+\subsection{Netzarchitektur}
+Die Netzarchitektur besteht grundsätzlich aus dem Zugangsnetz und dem Kernnetz:
+
+Das \textbf{Zugangsnetz} umfasst die Endgeräte, die Sendeanlagen und die Funkverbindung zwischen ihnen. 
+
+Das \textbf{Kernnetz} verarbeitet, steuert und vermittelt die Verbindungen und ermöglicht die Anbindung an externe Netze, wie das Internet oder das Festnetz. \cite{behnkeGrundkursMobilfunkUnd2022}
+
+Die beiden Netze sind über die \textbf{Backhaul-Anbindung} verbunden, die aufgrund ihrer hohen Kapazität vorzugsweise leitungsbasiert über Glasfaser realisiert wird. In abgelegenen Gebieten kann sie jedoch auch als Richtfunkverbindung umgesetzt werden.
+
+% Standorte
+Herzstück jeder Anlage ist die \textbf{Basisstation}, die zentrale Recheneinheit zur Steuerung der Datenübertragung.  Jede Basisstation besitz zudem mindestens eine \textbf{Antenne}, über die mittels elektromagnetischen Wellen eine bidirektionale Kommunikation mit dem Endgerät erfolgt. Üblicherweise werden pro Analge drei Sektor-Antennen verwendet, die jeweils gerichtet in einen Sektor von 120 Grad abstrahlen. Bei unterschiedlichen Technologien werden diese in unterschiedlichen Ebenen angeordnet. Jeder Antennensektor definiert dabei eine \textbf{Mobilfunkzelle}. Dadurch ergibt sich ein idealisiertes, sechseckiges Grundmuster. \cite{behnkeGrundkursMobilfunkUnd2022}
+
+% Kategorisierung 
+\subsection{Standortklassifizierung}
+Die Klassifizierung der Anlage kann je nach Perspektive unterschiedlich erfolgen. Aus technischer Sicht ist für die Funknetzplanung eine Unterscheidung nach Zellgrösse sinnvoll. Hier wird unterschieden zwischen Makrozellen (ländliche Gebiete), Mikrozellen (städische Gebiete), Pikozellen (Indoor-Abdeckung) und Femtozellen (Privatbereich). \cite{bundesratNachhaltigesMobilfunknetzBericht2022}
+
+Aus bauplanerischer Sicht hat sich eine Klassifizierung nach Standorttyp etabliert: \\
+
+\textbf{Greenfieldanlagen} überwiegen in ländlichen Gebieten. Charakteristisch dafür ist ein üblicherweise zwischen 20 und 50 Meter hocher, freistehender Mast.
+
+\textbf{Rooftopanlagen} überwiegen in besiedelten Gebieten. Charakteristisch dafür ist die Unterbringung auf einem bestehenden Gebäude. 
+
+Auf Flachdächern werden häufig freistehende Ständermasten errichtet. Dabei handelt es sich um einen Mast, der mit einer verankerungslosen Stahlunterkonstruktion verbunden wird. Das Kippen des Masts wird durch das Eigengewicht und zusätzliche Gewichtsplatten sichergestellt. Bei Dächern mit einer Aufbaukonstruktion, wird der Mast häufig direkt an dieser befestigt. Bei Schrägdächern durchdringt der Mast häufig die Dachkonstruktion und wird im Gebäudeinnern verankert. Die weitere Arbeit wird sich auf Rooftopanlagen mit Ständermasten beschränken.
+
+% Bauplanung
+Unabhängig vom Anlagetyp, erfolgt für die Planung jeweils eine Standortbesichtigung. Dort werden zusammen mit dem Anlagebetreiber und dem Eigentümer die technischen Spezifikationen definiert. Es erfolgt eine Drohnenaufnahme mittels Photogrammetrie. Bei dachdurchdringten Anlagen werden die relevanten Innenbereiche mittels terrestrischem Laserscaning erfasst. Auf Basis dieser Daten wird die Anlage geplant und die nötigen Unterlagen für eine Baubewilligung erarbeitet. Diese wird bei der zuständigen Gemeindebehörden eingereicht und nach Bewilligung gebaut. Falls mit Strahlungswerten von über 80 \% der zulässigen Imissionsgrenzwert zu rechnen ist, muss vor Inbetriebnahme der Anlage noch eine Sicherheitsmessung erfolgen. Anschliessend wird die Anlage dem Netzbetreiber übergeben. \cite{behnkeGrundkursMobilfunkUnd2022}  
+
+
+
+
+
+
+% Wie umgesetzt?
 
 \section{Scan-to-BIM}
 TODO: Introduction Scan-to-BIM. State-of-the-art technologies and applications.
