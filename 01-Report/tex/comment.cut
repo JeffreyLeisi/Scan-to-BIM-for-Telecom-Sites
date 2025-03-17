@@ -1,0 +1,7 @@
+    The \textbf{Modeling} step is used to transfer the vector data from the point cloud into a BIM model. The following methods are distinguished:
+
+    \begin{itemize}
+        \item \textbf{Manual Modeling:} TODO: Description
+        \item \textbf{Semi-automatic Modeling:} TODO: Description
+        \item \textbf{Automatic Modeling:} TODO: Description
+    \end{itemize}
