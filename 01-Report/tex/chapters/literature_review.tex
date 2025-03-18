@@ -1,134 +1,195 @@
 \chapter{Literature Review}
 \label{sec:literature_review}
 
-\section{Mobile Communications}
+\section{Cell Site Planning}
+
+
+% terminology:
+% Mobile Kommunikation = mobile communications
+% Mobilfunk = cellular communications
+% Mobilfunknetz = mobile network
+% Zellularnetz = cellular network
+% Mobilfunkplanung = cellular planning
+% Funknetzplanung = radio network planning (RNP)
+% Standortplanung = cell site planning
+
 \begin{German}
-    \textbf{Mobilfunk} ist ein Teilbereich der Telekommunikation, der sich mit der drahtlosen Übertragung von Sprache und Daten über Funknetze befasst. Die Planung dieser Netze wird als \textbf{Mobilfunkplanung} bezeichnet. Innerhalb dieses Fachgebiets haben sich unterschiedliche Disziplinen entwickelt:
+    \textbf{Mobile Kommunikation} ist ein Teilbereich der Telekommunikation (vgl. \ref{fig:telecommunications_hierarchy}), der sich allgemein mit der drahtlosen Übertragung von Sprache und Daten befasst und sich Empfänger oder Sender frei bewegen können (WLAN, Bluetooth, Satellitenkommunikation, ...) \cite{bundesamtfurstrahlenschutzWhatMobileCommunication}. \textbf{Mobilfunk} ist ein Teilbereich davon, bei dem \textbf{Zellularnetze} verwendet werden \cite{jiangCellularCommunicationNetworks2024}. Ein Zellularnetz setzt sich aus mehreren Funkzellen zusammen. Die Planung dieser Netze wird \textbf{Mobilfunkplanung} genannt. Innerhalb dieses Fachgebiets haben sich wiederum unterschiedliche Disziplinen entwickelt:
 
     \begin{itemize}
-        \item \textbf{Netzwerkplanung:} Die Netzwerkplanung umfasst die Umsetzung und Optimierung der Netzwerkarchitektur eines Mobilfunknetzes. Sie beinhaltet die detaillierte Planung der Zellstruktur, Frequenzverteilung, Kapazitätsberechnung und Interferenzminimierung, um eine effiziente, stabile und leistungsfähige Netzabdeckung sicherzustellen. Ein wesentlicher Bestandteil der Netzwerkplanung ist die Bestimmung des geografischen Perimeters, in dem eine Mobilfunkanlage erforderlich ist.
-        Der Schwerpunkt der Netzwerkplanung liegt auf elektronischen und signaltechnischen Aspekten, wodurch sie stark standardisiert und international reguliert ist. Aufgrund dieser Standardisierung und technischen Komplexität ist die verfügbare Fachliteratur zur Mobilfunkplanung weitgehend auf die Netzwerkplanung fokussiert.
+        \item \textbf{Funknetzplanung:} Die Funknetzplanung hat einen elektrotechnischen Fokus und bestimmt, wo Funkzellen stehen sollen, wie das Signal verteilt wird, wie viele Nutzer gleichzeitig verbunden werden können und wie Störungen vermieden werden. \cite{academyforlorawanrAcademyLoRaWANWhat,telecomtrainerRNPRadioNetwork2023}.
 
-        \item \textbf{Standortplanung:} Die Standortplanung bezieht sich auf die Identifikation und bauliche Umsetzung eines physischen Standorts innerhalb des durch die Netzwerkplanung definierten Perimeters. Dazu gehört die Auswahl geeigneter Standorte unter Berücksichtigung von topografischen, baulichen, rechtlichen und umweltbezogenen Faktoren.
-        Im Gegensatz zur Netzwerkplanung ist die Standortplanung weniger standardisiert, da sie stark von lokalen Gegebenheiten abhängt. Diese Variabilität führt dazu, dass die wissenschaftliche Fachliteratur zu diesem Thema vergleichsweise begrenzt ist. Stattdessen ergeben sich Planungsprozesse und Begriffsdefinitionen oft aus der Praxis, beispielsweise durch behördliche Richtlinien oder unternehmensinterne Prozesse.
+        \item \textbf{Standortplanung:} Die Standortplanung hat einen bautechnischen Fokus und bezieht sich auf die Identifikation und bauliche Umsetzung eines physischen Standorts innerhalb des durch die Funknetzplanung definierten Perimeters \cite{habibPDFStudyCell2024}.
     \end{itemize}
-
-    Diese Arbeit konzentriert sich auf die Standortplanung von Mobilfunkanlagen. Zunächst werden die hierfür relevanten Grundlagen geschaffen, ohne dabei zu sehr auf technische Details einzugehen. In der Fallstudie wird dann noch genauer auf die einzelnen Prozesse im Zusammenhang mit BIM eingegangen.
 \end{German}
-
+    
 \begin{English}
-    \textbf{Mobile communications} is a subfield of telecommunications that deals with the wireless transmission of voice and data over radio networks. The planning of these networks is referred to as \textbf{mobile network planning}. Within this field, different disciplines have developed:
+    \textbf{Mobile communications} is a subfield of telecommunications (see \ref{fig:telecommunications_hierarchy}) that generally deals with the wireless transmission of voice and data and allows receivers or transmitters to move freely (WLAN, Bluetooth, satellite communication, ...). \cite{bundesamtfurstrahlenschutzWhatMobileCommunication}. \textbf{Cellular communications} is a subfield of this, in which \textbf{cellular networks} are used \cite{jiangCellularCommunicationNetworks2024}. A cellular network consists of several radio cells. The planning of these networks is called \textbf{cellular planning}. Within this field, different disciplines have developed:
 
     \begin{itemize}
-        \item \textbf{Network Planning:} Network planning involves the implementation and optimization of the network architecture of a mobile network. It includes detailed planning of the cell structure, frequency distribution, capacity calculation, and interference minimization to ensure efficient, stable, and high-performance network coverage. An essential part of network planning is determining the geographical perimeter where a mobile radio system is required.
-        The focus of network planning is on electronic and signal engineering aspects, making it highly standardized and internationally regulated. Due to this standardization and technical complexity, the available literature on mobile network planning is largely focused on network planning.
+        \item \textbf{Radio Network Planning (RNP):} Radio network planning has an electrical engineering focus and determines where radio cells should be located, how the signal is distributed, how many users can be connected simultaneously, and how interference can be avoided. \cite{academyforlorawanrAcademyLoRaWANWhat,telecomtrainerRNPRadioNetwork2023}.
 
-        \item \textbf{Site Planning:} Site planning refers to the identification and construction of a physical site within the perimeter defined by network planning. This includes selecting suitable sites, taking into account topographical, structural, legal, and environmental factors.
-        In contrast to network planning, site planning is less standardized, as it depends heavily on local conditions. This variability means that the scientific literature on this topic is relatively limited. Instead, planning processes and definitions often arise from practice, such as regulatory guidelines or internal company processes.
+        \item \textbf{Cell Site Planning:} Cell site planning has a structural engineering focus and refers to the identification and structural implementation of a physical site within the perimeter defined by radio network planning \cite{habibPDFStudyCell2024}.
     \end{itemize}
-
-    This work focuses on the site planning of mobile radio systems. First, the relevant basics are established without going into too much technical detail. The case study then goes into more detail on the individual processes related to BIM.
 \end{English}
 
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+        % Telecommunications (largest ellipse, shifted right)
+        \draw[thick] (1,0) ellipse (4 and 2.5);
+        \node at (1,2.2) {\textbf{1}}; % Number inside
 
-\subsection{International Status of Mobile Communications}
+        % Mobile Communications (subset ellipse, shifted further right)
+        \draw[thick] (1.5,0) ellipse (3 and 1.8);
+        \node at (1.5,1.5) {\textbf{2}}; % Number inside
+
+        % Cellular Communications (smallest subset ellipse, even further right)
+        \draw[thick] (2,0) ellipse (2 and 1.2);
+        \node at (2,0.7) {\textbf{3}}; % Number inside
+
+        % Radio Network Planning (small circle inside Cellular Communications)
+        \draw[thick] (1.8,-0.3) circle (0.6);
+        \node at (1.8,-0.3) {\textbf{4}}; % Number inside
+
+        % Cell Site Planning (small circle inside Cellular Communications)
+        \draw[thick] (2.8,-0.2) circle (0.6);
+        \node at (2.8,-0.2) {\textbf{5}}; % Number inside
+
+        % Legend (outside the figure)
+        \node[right] at (5.2,1.3) {1 - Telecommunications};
+        \node[right] at (5.2,0.8) {2 - Mobile Communications};
+        \node[right] at (5.2,0.3) {3 - Cellular Communications};
+        \node[right] at (5.2,-0.2) {4 - Radio Network Planning};
+        \node[right] at (5.2,-0.7) {5 - Cell Site Planning};
+
+    \end{tikzpicture}
+    \caption{Telecommunications Hierarchy}
+    \label{fig:telecommunications_hierarchy}
+\end{figure}
+
+
 \begin{German}
-    Der gesamte mobile Datenverkehr nimmt weltweit exponentiell zu. Bis ungefähr 2020 verdoppelte sich der Verkehr etwa alle zwei Jahre. Für die Zeit bis 2030 werden noch immer jährliche Wachstumsraten von durchschnittlich 19 \% prognostiziert. Derzeit werden 34 \% des mobilen Datenverkehrs über 5G-Netzwerke abgewickelt. Bis 2030 soll dieser Anteil auf 80 \% steigen.
+    Diese Arbeit fokusiert sich auf die Standortplanung. Für die Literaturanalyse wurden zwei allgemeine Werke zu Mobilfunk vom Springer-Verlag \cite{behnkeGrundkursMobilfunkUnd2022,jiangCellularCommunicationNetworks2024} sowie drei unter Standortplanung gelisteten Paper \cite{engelsDimensioningCellSite2013,ahamed5GNetworkCoverage2021,huangAutomaticCellPlanning2000} herangezogen. Es wurde festgestellt, dass hauptsächlich elektrotechnische Themen behandelt werden. Eine mögliche Erklärung könnte sein, dass elektrotechnische Bereiche wie Funktechnik und Signalverarbeitung eine grosse technische Tiefe aufweisen und daher stark erforscht werden. Als Folge wurden dise Bereiche international stark standardisiert (ITU, ETSI, 3GPP). Bauliche Themen hängen dagegen stärker von lokalen Gegebenheiten ab, die durch praxisnahe Richtlinien geregelt werden. Dafür wurde ein vom Bundesrat in Auftrag gegebener Bericht "Nachhaltiges Mobilfunknetz" herangezogen \cite{bundesratNachhaltigesMobilfunknetzBericht2022}.
 
-    Zum Anstieg entscheidend beigetragen haben Video-Streaming mit immer höheren Bildschirmauflösungen (4K, 8K), das mitlerweile 74 \% des mobilen Datenverkehrs ausmacht. Haupttreiber des zukünftigen Wachstums wird besonders in den Bereichen des autonomen Fahren, Extended Reality, Industrie 4.0 sowie generativer KI gesehen. 
-    Fixed Wireless Access (FWA) wird stark an bedeutung gewinnen und bis 2030 mit 36 \% einen erheblichen Anteil des Datenverkehrs ausmachen. Dabei werden stationäre Geräte (z. B. Computer) über ein CPE-Gerät mit einer festen Breitbandverbindung versorgt, die über mobile Netzwerke (4G/5G) bereitgestellt wird. Besonders in wirtschaftlich schwächer entwickelten Regionen wird FWA traditionelle Festnetzanschlüsse zunehmend als kostengünstigere Alternative verdrängen. \cite{EricssonMobilityReport}
+    Nachfolgend sollen zentrale Erkenntnisse der Literaturanalyse zusammengefasst werden. Im Bereich der Standortplanung wird auf die Terminologie der Schweizer Mobilfunkbrache zurückgegriffen.
 \end{German}
 
 \begin{English}
-    The global mobile data traffic is increasing exponentially. Until around 2020, traffic volumes doubled approximately every two years. For the period up to 2030, annual growth rates of an average of 19 \% are still projected. Currently, 34 \% of mobile data traffic is handled via 5G networks. By 2030, this share is expected to rise to 80 \%.  
+    This work focuses on cell site planning. For the literature analysis, two general works on mobile communications from Springer \cite{behnkeGrundkursMobilfunkUnd2022,jiangCellularCommunicationNetworks2024} as well as three papers listed under cell site planning \cite{engelsDimensioningCellSite2013,ahamed5GNetworkCoverage2021,huangAutomaticCellPlanning2000} were consulted. It was found that mainly electrical engineering topics are addressed. One possible explanation could be that electrical engineering areas such as radio technology and signal processing have a high technical depth and are therefore extensively researched. As a result, these areas have been strongly standardized internationally (ITU, ETSI, 3GPP). Structural topics, on the other hand, depend more on local conditions, which are regulated by practical guidelines. For this purpose, a report commissioned by the Federal Council "Sustainable Mobile Network" was consulted \cite{bundesratNachhaltigesMobilfunknetzBericht2022}.
 
-    A key driver of this increase has been video streaming with ever-higher screen resolutions (4K, 8K), which now accounts for 74 \% of mobile data traffic. The main drivers of future growth are expected to be in the areas of autonomous driving, extended reality, Industry 4.0, and generative AI.  
-    Fixed Wireless Access (FWA) is expected to gain significant importance and account for a substantial 36 \% of total data traffic by 2030. In this context, stationary devices (e.g., computers) are supplied via a CPE device with a fixed broadband connection provided through mobile networks (4G/5G). Particularly in economically less developed regions, FWA is expected to increasingly replace traditional fixed-line connections as a more cost-effective alternative. \cite{EricssonMobilityReport}
+    The following section summarizes key findings of the literature analysis. In the field of cell site planning, the terminology of the Swiss mobile communications industry is used.
 \end{English}
 
-\subsection{National Status of Mobile Communications}
+
+\subsection{International Status}
 \begin{German}
-    In der Schweiz vertritt der Bund die Ansicht, dass eine leistungsfähige Telekommunikationsinfrastruktur für die Wirtschaft und Gesellschaft einen hohen Stellenwert hat. Ein rascher Ausbau leistungsfähriger 5G Netze sei deshalb wichtig. Nach Angaben der drei Betreiber sind dafür 7'500 neue Antennenstandorte und Investitionen in der Höhe von 3.2 Milliarden Franken notwendig. \cite{bundesratNachhaltigesMobilfunknetzBericht2022}
+    Der gesamte mobile Datenverkehr nimmt weltweit exponentiell zu \cite{EricssonMobilityReport}. Bis ungefähr 2020 verdoppelte sich der Verkehr etwa alle zwei Jahre. Für die Zeit bis 2030 werden noch immer jährliche Wachstumsraten von durchschnittlich 19 \% prognostiziert. Derzeit werden 34 \% des mobilen Datenverkehrs über 5G-Netzwerke abgewickelt. Bis 2030 soll dieser Anteil auf 80 \% steigen.
 
-    Ihr Marktanteil nach Kundenanzahl lag Ende 2023 bei Swisscom 54.3 \%, bei Sunrise 23.6 \% und bei Salt 17.1 \% \cite{bakomMarktanteileMobilfunknetz}. Die Marktdurchdringung betrug 128.9 \%. Damit gibt es mehr aktive Simkarten als Einwohner. \cite{bakomAnzahlMobilfunkkundinnenUnd}.
-
-    Zum Schutz der Bevölkerung vor wissenschaftlich nachgeweisenen Schäden aufgrund nichtionisierender Strahlung (NIS), hat die International Commission on Non-Ionizing Radiation Protection (ICNIRP) empfohlene Grenzwerte definiert. Diese wurden vom Bund in der Verordnung über den Schutz vor nichtionisierender Strahlung (NISV) als Immissionsgrenzwerte übernommen und entsprechen der Empfehlung der EU. Diese müssen an allen Orten eingehalten werden, an denen sich Menschen aufhalten können. Aufgrund gesundheitlicher Bedenken, wurden sogenannte Anlagegrenzwerte definiert \cite{baumannMitVerordnungUeber2005}. Dieser verschärfte Grenzwert beträgt noch 10 \% des Immissionsgrenzwert und muss an Orten mit empfindlicher Nutzung (OMEN) eingehalten werden. Dies sind Bereiche, von denen auszugehen ist, dass sich Menschen regelmässig über längere Zeit aufhalten. Die elektrische Feldstärke beträgt dort ein Zehntel des in Deutschland und Frankreich zulässigen Wertes. Die Leistung einer elektromagnetischen Welle ist dabei proprtional zum Quadrat der elektrischen Feldstärke. Eine um Faktor 10 reduzierte Feldstärke, führt damit zu einer um Faktor 100 sinkenden Sendeleistung \cite{chance5gAnlagegrenzwerteImMobilfunk}.
-    Sobald eine Anlage die maximal zulässige Sendeleistung erreicht hat, kann diese nicht mehr weiter ausgebaut werden. Zur Erhöhung der Netzkapazität müssen dann neue Stanorte gebaut werden \cite{bundesratNachhaltigesMobilfunknetzBericht2022}.
+    Zum Anstieg entscheidend beigetragen haben Video-Streaming mit immer höheren Bildschirmauflösungen (4K, 8K), das mitlerweile 74 \% des mobilen Datenverkehrs ausmacht \cite{EricssonMobilityReport}. Haupttreiber des zukünftigen Wachstums wird besonders in den Bereichen des autonomen Fahren, Extended Reality, Industrie 4.0 sowie generativer KI gesehen. 
+    Fixed Wireless Access (FWA) wird stark an bedeutung gewinnen und bis 2030 mit 36 \% einen erheblichen Anteil des Datenverkehrs ausmachen. Dabei werden stationäre Geräte (z. B. Computer) über ein CPE-Gerät mit einer festen Breitbandverbindung versorgt, die über mobile Netzwerke (4G/5G) bereitgestellt wird. Besonders in wirtschaftlich schwächer entwickelten Regionen wird FWA traditionelle Festnetzanschlüsse zunehmend als kostengünstigere Alternative verdrängen. 
 \end{German}
 
 \begin{English}
-    In Switzerland, the federal government takes the view that a powerful telecommunications infrastructure is of great importance for the economy and society. Therefore, rapid expansion of powerful 5G networks is important. According to the three providers, this requires 7,500 new antenna sites and investments of CHF 3.2 billion. \cite{bundesratNachhaltigesMobilfunknetzBericht2022}
+    Worldwide, mobile data traffic is increasing exponentially \cite{EricssonMobilityReport}. Until around 2020, traffic doubled about every two years. Annual growth rates of an average of 19 \% are still forecast for the period until 2030. Currently, 34 \% of mobile data traffic is handled via 5G networks. By 2030, this share is expected to increase to 80 \%.
 
-    Their market share by number of customers was 54.3 \% for Swisscom, 23.6 \% for Sunrise, and 17.1 \% for Salt at the end of 2023 \cite{bakomMarktanteileMobilfunknetz}. The market penetration was 128.9 \%. This means that there are more active SIM cards than residents. \cite{bakomAnzahlMobilfunkkundinnenUnd}.
-
-    To protect the population from scientifically proven damage due to non-ionizing radiation (NIS), the International Commission on Non-Ionizing Radiation Protection (ICNIRP) has defined recommended limit values. These have been adopted by the federal government in the Ordinance on Protection against Non-Ionizing Radiation (NISV) as immission limit values and correspond to the EU recommendation. These must be complied with at all locations where people can be present. Due to health concerns, so-called system limit values have been defined \cite{baumannMitVerordnungUeber2005}. This stricter limit value is 10 \% of the immission limit value and must be complied with at locations with sensitive use (OMEN). These are areas where it is assumed that people will be present regularly for longer periods. The electric field strength there is one-tenth of the permissible value in Germany and France. The power of an electromagnetic wave is proportional to the square of the electric field strength. A field strength reduced by a factor of 10 thus leads to a transmission power reduced by a factor of 100 \cite{chance5gAnlagegrenzwerteImMobilfunk}. Once a system has reached the maximum permissible transmission power, it can no longer be expanded. To increase network capacity, new sites must be built. \cite{bundesratNachhaltigesMobilfunknetzBericht2022}.
+    The increase has been significantly driven by video streaming with ever higher screen resolutions (4K, 8K), which now accounts for 74 \% of mobile data traffic \cite{EricssonMobilityReport}. The main drivers of future growth are seen particularly in the areas of autonomous driving, Extended Reality, Industry 4.0, and generative AI. 
+    Fixed Wireless Access (FWA) will become increasingly important and account for a significant share of the traffic by 2030 with 36 \%. Stationary devices (e.g., computers) are supplied with a fixed broadband connection via a CPE device provided by mobile networks (4G/5G). Especially in economically less developed regions, FWA will increasingly displace traditional fixed network connections as a more cost-effective alternative.
 \end{English}
 
-\subsection{Mobile Network Generations}
+\subsection{National Status}
 \begin{German}
-    Ungefähr alle zehn Jahre wird eine neue Mobilfunkgeneration eingeführt. Diese haben jeweils eine höhere Datenübertragungsrate, eine geringere Latenz und eine höhere Anzahl an gleichzeitig verbundenen Geräten. Bis zur Einführung der sechten Generation (6G Vision, ca. 2030) wird derzeit die fünfte Generation (5G) ausgebaut. Ebenfalls praxisrelevant ist die vierte Generation (LTE), die ab 2012 ausgebaut wurde. Die dritte Generation (UMTS) wird als erstes von Swisscom auf Ende 2025 eingestellt \cite{swisscomAbschaltung3GErneuerung}. Die zweite Generation (GSM) wurde von den drei Anbeitern zwischen 2020 und 2023 eingestellt.
+    In der Schweiz vertritt der Bund die Ansicht, dass eine leistungsfähige Telekommunikationsinfrastruktur für die Wirtschaft und Gesellschaft einen hohen Stellenwert hat \cite{bundesratNachhaltigesMobilfunknetzBericht2022}. Ein rascher Ausbau leistungsfähriger 5G Netze sei deshalb wichtig. Nach Angaben der Betreiber Swisscom, Sunrise und Salt sind dafür 7'500 neue Antennenstandorte und Investitionen in der Höhe von 3.2 Milliarden Franken notwendig \cite{bundesratNachhaltigesMobilfunknetzBericht2022}.
+
+    Ihr Marktanteil nach Kundenanzahl lag Ende 2023 bei Swisscom 54.3 \%, bei Sunrise 23.6 \% und bei Salt 17.1 \% \cite{bakomMarktanteileMobilfunknetz}. Die Marktdurchdringung betrug 128.9 \%. Damit gibt es mehr aktive Simkarten als Einwohner \cite{bakomAnzahlMobilfunkkundinnenUnd}.
+
+    Zum Schutz der Bevölkerung vor wissenschaftlich nachgeweisenen Schäden aufgrund nichtionisierender Strahlung (NIS), hat die International Commission on Non-Ionizing Radiation Protection (ICNIRP) empfohlene Grenzwerte definiert \cite{baumannMitVerordnungUeber2005}. Diese wurden vom Bund in der Verordnung über den Schutz vor nichtionisierender Strahlung (NISV) als Immissionsgrenzwerte übernommen und entsprechen der Empfehlung der EU. Diese müssen an allen Orten eingehalten werden, an denen sich Menschen aufhalten können. Aufgrund gesundheitlicher Bedenken, wurden sogenannte Anlagegrenzwerte definiert. Dieser verschärfte Grenzwert beträgt noch 10 \% des Immissionsgrenzwert und muss an Orten mit empfindlicher Nutzung (OMEN) eingehalten werden. Dies sind Bereiche, von denen auszugehen ist, dass sich Menschen regelmässig über längere Zeit aufhalten. Die elektrische Feldstärke beträgt dort ein Zehntel des in Deutschland und Frankreich zulässigen Wertes. Die Leistung einer elektromagnetischen Welle ist dabei proprtional zum Quadrat der elektrischen Feldstärke. Eine um Faktor 10 reduzierte Feldstärke, führt damit zu einer um Faktor 100 sinkenden Sendeleistung \cite{chance5gAnlagegrenzwerteImMobilfunk}.
+    Sobald eine Anlage die maximal zulässige Sendeleistung erreicht hat, kann diese nicht mehr weiter ausgebaut werden. Zur Erhöhung der Netzkapazität müssen dann neue Stanorte gebaut werden. \cite{bundesratNachhaltigesMobilfunknetzBericht2022}
 \end{German}
 
 \begin{English}
-    Approximately every ten years, a new mobile network generation is introduced. Each generation has a higher data transfer rate, lower latency, and a higher number of devices connected simultaneously. Currently, the fifth generation (5G) is being expanded until the introduction of the sixth generation (6G Vision, around 2030). Also relevant in practice is the fourth generation (LTE), which was expanded from 2012. The third generation (UMTS) will be discontinued by Swisscom at the end of 2025 \cite{swisscomAbschaltung3GErneuerung}. The second generation (GSM) was discontinued by the three providers between 2020 and 2023.
-    To protect the population from scientifically proven damage due to non-ionizing radiation (NIS), the International Commission on Non-Ionizing Radiation Protection (ICNIRP) has defined recommended limit values. These have been adopted by the federal government in the Ordinance on Protection against Non-Ionizing Radiation (NISV) as immission limit values and correspond to the EU recommendation. These must be complied with at all locations where people can be present. Due to health concerns, so-called system limit values have been defined \cite{baumannMitVerordnungUeber2005}. This stricter limit value is 10 \% of the immission limit value and must be complied with at locations with sensitive use (OMEN). These are areas where it is assumed that people will be present regularly for longer periods. The electric field strength there is one-tenth of the permissible value in Germany and France. The power of an electromagnetic wave is proportional to the square of the electric field strength. A field strength reduced by a factor of 10 thus leads to a transmission power reduced by a factor of 100 \cite{chance5gAnlagegrenzwerteImMobilfunk}.
-    Once a system has reached the maximum permissible transmission power, it can no longer be expanded. To increase network capacity, the existing mobile network must then be expanded \cite{bundesratNachhaltigesMobilfunknetzBericht2022}.
+    In Switzerland, the federal government takes the view that a powerful telecommunications infrastructure is of high importance for the economy and society \cite{bundesratNachhaltigesMobilfunknetzBericht2022}. Therefore, a rapid expansion of powerful 5G networks is important. According to the operators Swisscom, Sunrise, and Salt, this requires 7,500 new antenna sites and investments of 3.2 billion Swiss francs \cite{bundesratNachhaltigesMobilfunknetzBericht2022}.
+
+    Their market share by number of customers was 54.3 \% for Swisscom, 23.6 \% for Sunrise, and 17.1 \% for Salt at the end of 2023 \cite{bakomMarktanteileMobilfunknetz}. The market penetration was 128.9 \%. This means that there are more active SIM cards than inhabitants \cite{bakomAnzahlMobilfunkkundinnenUnd}.
+
+    To protect the population from scientifically proven damage due to non-ionizing radiation (NIS), the International Commission on Non-Ionizing Radiation Protection (ICNIRP) has defined recommended limit values \cite{baumannMitVerordnungUeber2005}. These were adopted by the federal government in the Ordinance on Protection against Non-Ionizing Radiation (NISV) as immission limit values and correspond to the EU recommendation. These must be complied with at all locations where people can stay. Due to health concerns, so-called system limit values were defined. This stricter limit value is 10 \% of the immission limit value and must be complied with at locations with sensitive use (OMEN). These are areas where it is assumed that people stay regularly for longer periods. The electric field strength there is one-tenth of the permissible value in Germany and France. The power of an electromagnetic wave is proportional to the square of the electric field strength. A field strength reduced by a factor of 10 thus leads to a transmission power reduced by a factor of 100 \cite{chance5gAnlagegrenzwerteImMobilfunk}.
+\end{English}
+
+\subsection{Cellular Network Generations}
+
+% terminology:
+% Generation = Generation
+% Mobilfunkgeneration = Cellular network generation
+
+\begin{German}
+    Ungefähr alle zehn Jahre wird eine neue Mobilfunkgeneration eingeführt \cite{bundesratNachhaltigesMobilfunknetzBericht2022}. Diese haben jeweils eine höhere Datenübertragungsrate, eine geringere Latenz und eine höhere Anzahl an gleichzeitig verbundenen Geräten. Bis zur Einführung der sechten Generation (6G Vision) ca. 2030 wird derzeit die fünfte Generation (5G) ausgebaut. Ebenfalls praxisrelevant ist die vierte Generation (LTE), die ab 2012 ausgebaut wurde. Die dritte Generation (UMTS) wird als erstes von Swisscom auf Ende 2025 eingestellt \cite{swisscomAbschaltung3GErneuerung}. Die zweite Generation (GSM) wurde von den drei Anbeitern zwischen 2021 und 2023 eingestellt \cite{onlineSchweizEndgueltigesAus2022}.
+\end{German}
+
+\begin{English}
+    Approximately every ten years, a new cellular network generation is introduced \cite{bundesratNachhaltigesMobilfunknetzBericht2022}. Each of these has a higher data transmission rate, lower latency, and a higher number of devices connected simultaneously. Until the introduction of the sixth generation (6G Vision) around 2030, the fifth generation (5G) is currently being expanded. Also practically relevant is the fourth generation (LTE), which was expanded from 2012. The third generation (UMTS) will be discontinued by Swisscom by the end of 2025 \cite{swisscomAbschaltung3GErneuerung}. The second generation (GSM) was discontinued by the three providers between 2021 and 2023 \cite{onlineSchweizEndgueltigesAus2022}.
 \end{English}
 
 \subsection{Network Architecture}
+
+% terminology:
+% Netzarchitektur = Network architecture
+% Zugangsnetz = Access network
+% Kernnetz = Core network
+% Backhaul-Anbindung = Backhaul connection
+% Ständermast = Stand-Mounted Pole
+% Fassadenmast = Wall-Mounted Pole
+% Dachstockmast = Attic-Mounted Pole
+% Funkzelle = Radio cell
+
 \begin{German}
-    Die Netzarchitektur eines Mobilfunknetzes kann in verschiedene Komponenten oder Teilbereiche gegliedert werden:
+    Die Netzarchitektur eines Mobilfunknetzes kann in verschiedene Komponenten gegliedert werden \cite{behnkeGrundkursMobilfunkUnd2022,jiangCellularCommunicationNetworks2024}:
 
     \begin{itemize}
-        \item \textbf{Zugangsnetz:} Das Zugangsnetz umfasst die Endgeräte, die Sendeanlagen und die Funkverbindung zwischen ihnen.
-        \item \textbf{Kernnetz:} Das Kernnetz verarbeitet, steuert und vermittelt die Verbindungen und ermöglicht die Anbindung an externe Netze, wie das Internet oder das Festnetz. \cite{behnkeGrundkursMobilfunkUnd2022}
+        \item \textbf{Zugangsnetz:} Das Zugangsnetz empfängt Signale vom Endgerät (z. B. Smartphone) und leitet sie an das Kernnetz weiter. Es umfasst die Endgeräte, die Sendeanlagen und die Funkverbindung zwischen ihnen. 
+        \item \textbf{Kernnetz:} Das Kernnetz verarbeitet, steuert und vermittelt die Verbindungen und ermöglicht die Anbindung an externe Netze, wie das Internet oder das Festnetz. Jeder Betreiber hat sein eigenes Kernnetz.
         \item \textbf{Backhaul-Anbindung:} Die beiden Netze sind über die Backhaul-Anbindung verbunden, die aufgrund ihrer hohen Kapazität vorzugsweise leitungsbasiert über Glasfaser realisiert wird. In abgelegenen Gebieten kann sie jedoch auch als Richtfunkverbindung umgesetzt werden.
     \end{itemize}
 
-    Herzstück jeder Anlage ist die \textbf{Basisstation}, die zentrale Recheneinheit zur Steuerung der Datenübertragung.  Jede Basisstation besitz zudem mindestens eine \textbf{Antenne}, über die mittels elektromagnetischen Wellen eine bidirektionale Kommunikation mit dem Endgerät erfolgt. Üblicherweise werden pro Analge drei Sektor-Antennen verwendet, die jeweils gerichtet in einen Sektor von 120 Grad abstrahlen. Bei unterschiedlichen Technologien werden diese in unterschiedlichen Ebenen angeordnet. Jeder Antennensektor definiert dabei eine \textbf{Mobilfunkzelle}. Dadurch ergibt sich ein idealisiertes, sechseckiges Grundmuster. \cite{behnkeGrundkursMobilfunkUnd2022}
+    Herzstück jeder Anlage ist die \textbf{Basisstation}, die zentrale Recheneinheit zur Steuerung der Datenübertragung.  Jede Basisstation besitz zudem mindestens eine \textbf{Antenne}, über die mittels elektromagnetischen Wellen eine bidirektionale Kommunikation mit dem Endgerät erfolgt. Üblicherweise werden pro Analge drei Sektor-Antennen verwendet, die jeweils gerichtet in einen Sektor von 120 Grad abstrahlen. Bei unterschiedlichen Technologien werden diese in unterschiedlichen Ebenen angeordnet. Jeder Antennensektor definiert dabei eine \textbf{Funkzelle}. Dadurch ergibt sich ein idealisiertes, sechseckiges Grundmuster. \cite{behnkeGrundkursMobilfunkUnd2022}
 \end{German}
 
 \begin{English}
-    The network architecture of a mobile network can be divided into various components or subareas:
+    The network architecture of a cellular network can be divided into various components \cite{behnkeGrundkursMobilfunkUnd2022,jiangCellularCommunicationNetworks2024}:
 
     \begin{itemize}
-        \item \textbf{Access Network:} The access network includes the end devices, the transmitting systems, and the radio connection between them.
-        \item \textbf{Core Network:} The core network processes, controls, and mediates the connections and enables connections to external networks such as the Internet or the fixed network. \cite{behnkeGrundkursMobilfunkUnd2022}
-        \item \textbf{Backhaul Connection:} The two networks are connected via the backhaul connection, which is preferably implemented as a line-based connection via fiber optic due to its high capacity. However, in remote areas, it can also be implemented as a microwave connection.
+        \item \textbf{Access network:} The access network receives signals from the end device (e.g., smartphone) and forwards them to the core network. It includes the end devices, the transmitting systems, and the radio connection between them.
+        \item \textbf{Core network:} The core network processes, controls, and mediates the connections and enables connections to external networks such as the Internet or the fixed network. Each operator has its own core network.
+        \item \textbf{Backhaul connection:} The two networks are connected via the backhaul connection, which is preferably implemented as a line-based connection via fiber optic due to its high capacity. However, in remote areas, it can also be implemented as a microwave connection.
     \end{itemize}
 
-    The \textbf{base station} is the central processing unit for controlling data transmission and is the heart of each system. Each base station also has at least one \textbf{antenna} through which bidirectional communication with the end device takes place via electromagnetic waves. Typically, three sector antennas are used per system, each radiating in a sector of 120 degrees. These are arranged in different planes for different technologies. Each antenna sector defines a \textbf{mobile radio cell}. This results in an idealized hexagonal basic pattern. \cite{behnkeGrundkursMobilfunkUnd2022}
+    The \textbf{base station} is the central processing unit for controlling data transmission and is the heart of each system. Each base station also has at least one \textbf{antenna} through which bidirectional communication with the end device takes place via electromagnetic waves. Typically, three sector antennas are used per system, each radiating in a sector of 120 degrees. These are arranged in different planes for different technologies. Each antenna sector defines a \textbf{radio cell}. This results in an idealized hexagonal basic pattern. \cite{behnkeGrundkursMobilfunkUnd2022}
 \end{English}
 
-\subsection{System Classification}
+\subsection{Site Classification}
 \begin{German}
-    Die Klassifizierung der Anlage kann je nach Perspektive unterschiedlich erfolgen. Aus technischer Sicht ist für die Funknetzplanung eine Unterscheidung nach Zellgrösse sinnvoll. Hier wird unterschieden zwischen Makrozellen (ländliche Gebiete), Mikrozellen (städische Gebiete), Pikozellen (Indoor-Abdeckung) und Femtozellen (Privatbereich). \cite{bundesratNachhaltigesMobilfunknetzBericht2022}
-
-    Aus bauplanerischer Sicht hat sich eine Klassifizierung nach Standorttyp etabliert:
+    Während in der Funknetzplanung die Klassifizierung nach Zellgrösse (Makrozellen, Mikrozellen, Pikozellen, Femtozellen) üblich ist \cite{jiangCellularCommunicationNetworks2024}, hat sich in der schweizerischen Standortplanung folgende Unterteilung (vgl. \ref{fig:site_classification}) etabliert: 
 
     \begin{itemize}
-        \item \textbf{Greenfield-Standort:} überwiegen in ländlichen Gebieten. Charakteristisch dafür ist ein üblicherweise zwischen 20 und 50 Meter hocher, freistehender Mast.
-        \item \textbf{Rooftop-Standort:} überwiegen in besiedelten Gebieten. Charakteristisch dafür ist die Unterbringung auf einem bestehenden Gebäude.
+        \item \textbf{Greenfield-Standort:} Dieser Standorttyp ist überwiegen in ländlichen Gebieten anzutreffen Charakteristisch dafür ist ein üblicherweise zwischen 20 und 50 Meter hocher, freistehender Mast.
+        \item \textbf{Rooftop-Standort:} Dieser Standorttyp ist überwiegen in besiedelten Gebieten anzutreffen. Charakteristisch dafür ist die Unterbringung auf dem Dach eines bestehenden Gebäudes. Je nach gewählter Mastkonstruktion kann weiter unterschieden werden:
         \begin{itemize}
-            \item Ständermast [2]
-            \item Fassadenmontierter Mast [3]
-            \item Dachdurchdringender Mast [4]
+            \item \textbf{Ständerkonstruktion [2]:} Mit dem Gebäude nicht fest verbundener Mast, der auf eine Stahlunterkonstruktion aufgesetzt wird und auf dem Dach platziert wird.
+            \item \textbf{Fassadenmast [3]:} Mit dem Gebäude fest verbundener Mast, der an der Fassade montiert wird. 
+            \item \textbf{Dachstockmast [4]:} Mit dem Gebäude fest verbundener Mast, der im Gebäudeinnern montiert wird und durch eine Öffnung im Dach ins Freie ragt.
         \end{itemize}
     \end{itemize}
 \end{German}
 
 \begin{English}
-    The classification of the system can vary depending on the perspective. From a technical point of view, a distinction according to cell size is useful for radio network planning. Here, a distinction is made between macrocells (rural areas), microcells (urban areas), picocells (indoor coverage), and femtocells (private areas). \cite{bundesratNachhaltigesMobilfunknetzBericht2022}
-
-    From a construction planning perspective, a classification according to site type has been established: 
+    While in radio network planning the classification by cell size (macrocells, microcells, picocells, femtocells) is common \cite{jiangCellularCommunicationNetworks2024}, the following classification (see \ref{fig:site_classification}) has established itself in Swiss site planning:
 
     \begin{itemize}
-        \item \textbf{Greenfield site:} predominant in rural areas. Characteristic is a usually between 20 and 50 meters high, freestanding mast.
-        \item \textbf{Rooftop site:} predominant in populated areas. Characteristic is the installation on an existing building.
+        \item \textbf{Greenfield site:} This type of site is mainly found in rural areas. Characteristic of this is a usually between 20 and 50 meters high, freestanding mast.
+        \item \textbf{Rooftop site:} This type of site is mainly found in populated areas. Characteristic of this is the placement on the roof of an existing building. Depending on the chosen mast construction, further distinctions can be made:
         \begin{itemize}
-            \item Stand mast [2]
-            \item Facade-mounted mast [3]
-            \item Roof-penetrating mast [4]
+            \item \textbf{Stand-mounted pole [2]:} Mast not firmly connected to the building, which is placed on a steel substructure and placed on the roof.
+            \item \textbf{Wall-mounted pole [3]:} Mast firmly connected to the building, which is mounted on the facade.
+            \item \textbf{Attic-mounted pole [4]:} Mast firmly connected to the building, which is mounted inside the building and protrudes through an opening in the roof to the outside.
         \end{itemize}
     \end{itemize}
 \end{English}
@@ -140,20 +201,13 @@
     \label{fig:site_classification}
 \end{figure}
 
-\begin{comment}
-    Unabhängig vom Anlagetyp, erfolgt für die Planung jeweils eine Standortbesichtigung. Dort werden zusammen mit dem Anlagebetreiber und dem Eigentümer die technischen Spezifikationen definiert. Es erfolgt eine Drohnenaufnahme mittels Photogrammetrie. Bei dachdurchdringten Anlagen werden die relevanten Innenbereiche mittels terrestrischem Laserscaning erfasst. Auf Basis dieser Daten wird die Anlage geplant und die nötigen Unterlagen für eine Baubewilligung erarbeitet. Diese wird bei der zuständigen Gemeindebehörden eingereicht und nach Bewilligung gebaut. Falls mit Strahlungswerten von über 80 \% der zulässigen Imissionsgrenzwert zu rechnen ist, muss vor Inbetriebnahme der Anlage noch eine Sicherheitsmessung erfolgen. Anschliessend wird die Anlage dem Netzbetreiber übergeben. \cite{behnkeGrundkursMobilfunkUnd2022}
-\end{comment}
-
-
-
-
-
-
-% Wie umgesetzt?
-
 \section{Building Information Modeling (BIM)}
 \begin{German}
-    \textbf{Building Information Modeling (BIM)} ist in erster Linie eine Methodik zur digitalen Planung, Ausführung und Verwaltung von Bauwerken über den gesamten Lebenszyklus hinweg. In der Praxis wird BIM daher häufig als Synonym für eine modellbasierte Planung verwednet, obschon BIM über die reine 3D-Modellierung hinaus gehen kann (z.B. 4D). Zur präzisen Abgrenzung zum Werkzeug, dass diese Methodik ermöglicht, wird dieses nachfolgend \textbf{BIM-Software} genannt.
+    \textbf{Building Information Modeling (BIM)} ist in erster Linie eine Methodik zur digitalen Planung, Ausführung und Verwaltung von Bauwerken über den gesamten Lebenszyklus hinweg \cite{astourLehrbuchGrundlagenBIMArbeitsmethode2022}. In der Praxis wird BIM daher häufig als Synonym für eine modellbasierte Planung verwednet, obschon BIM über die reine 3D-Modellierung hinaus gehen kann (z.B. 4D). Zur präzisen Abgrenzung zum Werkzeug, dass diese Methodik ermöglicht, wird dieses nachfolgend \textbf{BIM-Software} genannt.
+
+    Für die Literaturanalyse wurden zwei 
+
+
     Nachdem in der Einführung bereits die Entwicklung von BIM thematisiert wurde, werden im folgenden Kapitel die konzeptionellen Grundlagen erläutert. Dabei liegt der Fokus auf zentralen Konzepten, die für das spätere Verständnis der Anwendung in der Fallstudie relevant sein werden.
 \end{German}
 
