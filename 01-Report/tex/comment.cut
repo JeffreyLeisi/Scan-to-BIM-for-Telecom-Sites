@@ -1,7 +1,1 @@
-    The \textbf{Modeling} step is used to transfer the vector data from the point cloud into a BIM model. The following methods are distinguished:
-
-    \begin{itemize}
-        \item \textbf{Manual Modeling:} TODO: Description
-        \item \textbf{Semi-automatic Modeling:} TODO: Description
-        \item \textbf{Automatic Modeling:} TODO: Description
-    \end{itemize}
+    The general problem of the industry has already been addressed in the introduction (see \ref{sec:introduction}). Now, the bridge to the concrete problem that is addressed in this work should be built. The work was created in collaboration with Axians Switzerland, a corporate group with around 940 employees \cite{AxiansSchweiz}. Axians is the ICT brand of VINCI Energies, a business unit of the French group VINCI. With around 285,000 employees \cite{VINCI2025}, VINCI is one of the largest companies in the field of construction, infrastructure, and concessions worldwide.

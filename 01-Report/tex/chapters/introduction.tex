@@ -2,6 +2,7 @@
 \label{sec:introduction}
 
 \section{Background and Motivation}
+\label{sec:background_motivation}
 \begin{German}
     Die Bauindustrie ist einer der grössten Wirtschaftszweige, doch ihre Produktivität stagniert seit Jahrzehnten. In den zwei Jahrzehnten von 1995 bis 2015 wuchs ihre Produktivität nur um 1\%, weit unter dem globalen Wirtschaftsdurchschnitt von 2.8\%. Als einer der Gründe wird die geringe Automatisierung genannt \cite{barbosaReinventingConstructionRoute2017}.
 \end{German}
@@ -69,12 +70,14 @@
     \end{itemize}
 \end{English}
 
-\section{Research Objectives and Questions}
+
+\section{Research Objectives}
+\label{sec:research_objectives}
 \begin{German}
     Sowohl BIM als auch Scan-to-BIM wurden in den letzten Jahren intensiv erforscht \cite{rochaSurveyScantoBIMPractices2021}. \\
     Die bestehende Literatur für BIM ist sehr umfangreich. Es konnten zahlreiche Fachbücher und wissenschaftliche Publikationen gefunden werden. Speziell für Scan-to-BIM konnten hingegen keine Bücher aus wissenschaftlichen Fachverlagen identifiziert werden. Das Thema wurde in BIM-Fachbüchern nur oberflächlich behandelt. Die Literatur besteht hier primär aus wissenschaftlichen Publikationen. Oft angetroffene Anwendungen liegen im klassischen Bausektor und der Dokumentation von historischen Bauten. Publikationen, die sich speziell mit der Standortplanung der Telekommunikationsbranche beschäftigten konnten keine gefunden werden. Die Anforderungen an die zu generierenden Modelle unterscheiden sich nach Anwendung. Im klassischen Bausektor und bei historischen Bauten werden häufig sowohl die Innen- als auch die Aussenstrukturen modelliert. Bei der Standortplanung beschränkt sich die Modellierung hauptsächlich auf Aussenstrukturen und ähnelt damit Scan-to-GIS-Verfahren. Der Fokus liegt auf automatisierten Verfahren. \\
 
-    Für eine präzise Definition des Forschungsziel, sollen zunächst Ablaufsbegriffe definiert werden:
+    Zur begrifflichen Präzisierung des Forschungsziels werden zunächst zentrale Ablaufsbegriffe eingeführt. Diese Begriffe werden im Rahmen dieser Arbeit wie folgt verstanden:
     
     \begin{itemize}
         \item \textbf{Workflow:} Ein Workflow ist eine Abfolge von Arbeitsschritten, die zur Erreichung eines Ziels durchgeführt werden. Auf strategischer Ebene soll technologieunabhängig geklärt werden, \textit{WAS}, \textit{WANN} und \textit{WARUM} gemacht wird.\\
@@ -105,9 +108,9 @@
 
 \begin{English}
     Both BIM and Scan-to-BIM have been intensively researched in recent years \cite{rochaSurveyScantoBIMPractices2021}. \\
-    The existing literature on BIM is extensive, with numerous textbooks and scientific publications available. However, no books from scientific publishers could be identified specifically for Scan-to-BIM. The topic has only been superficially addressed in BIM textbooks, with the literature primarily consisting of scientific publications. Common applications are found in the traditional construction sector and the documentation of historical buildings. No publications specifically addressing the site planning of the telecommunications industry could be found. The requirements for the generated models vary depending on the application. In the traditional construction sector and historical buildings, both interior and exterior structures are often modeled. In site planning, modeling is mainly limited to exterior structures. Historical buildings often feature geometrically complex shapes, requiring high geometric accuracy for capture. In site planning, the level of generalization is higher, focusing instead on efficient processes. The requirements profile is thus closer to a Scan-to-GIS process than the publications covered in the literature. \\
+    The existing literature on BIM is extensive, with numerous textbooks and scientific publications available. However, no books from scientific publishers could be identified specifically for Scan-to-BIM. The topic has only been superficially covered in BIM textbooks, with the literature primarily consisting of scientific publications. Common applications are found in the traditional construction sector and the documentation of historical buildings. No publications specifically addressing site planning in the telecommunications industry could be found. The requirements for the generated models vary depending on the application. In the traditional construction sector and historical buildings, both interior and exterior structures are often modeled. In site planning, modeling is mainly limited to exterior structures, resembling Scan-to-GIS procedures. The focus is on automated procedures. \\
 
-    To precisely define the research objective, the necessary terms must first be defined:
+    To clarify the research objective, central workflow terms are introduced. These terms are understood as follows in this work:
 
     \begin{itemize}
         \item \textbf{Workflow:} A workflow is a sequence of work steps performed to achieve a goal. At the strategic level, it clarifies technology-independent \textit{WHAT}, \textit{WHEN}, and \textit{WHY} is done.\\
@@ -120,13 +123,13 @@
         \textit{Example: Segmentation by polyfit algorithm implemented in Python}
     \end{itemize}
 
-    The first step involves developing a site planning-specific framework. Existing workflows and methods from research will be used for this purpose. The second step involves developing an operationally executable toolchain for the framework and implementing it. Existing tools from practice will be used for this purpose. This leads to a main question with two sub-questions:
+    In a first step, a framework tailored to site planning will be developed using the "Research by Design" methodology. Existing workflows and methods from research will be used for this purpose. In a second step, an operationally executable toolchain will be developed for the framework and implemented.
 
     \begin{itemize}
-        \item \textbf{Main Question:} How can an application-oriented framework for implementing a Scan-to-BIM workflow for site planning in the telecommunications industry be developed and practically applied?
+        \item \textbf{Main Question:} How can the Scan-to-BIM workflow for site planning in the telecommunications industry be automated?
         \begin{itemize}
-            \item \textbf{Sub-Question 1:} What workflows and methodological approaches are described in the current literature, and how can they be systematically categorized?
-            \item \textbf{Sub-Question 2:} How can an individual framework with a toolchain be developed and implemented based on this information?
+            \item \textbf{Sub-Question 1:} Which methods are suitable for developing an automated Scan-to-BIM framework for site planning?
+            \item \textbf{Sub-Question 2:} Which tools are suitable for developing an automated Scan-to-BIM toolchain for site planning?
         \end{itemize}
     \end{itemize}
 \end{English}
