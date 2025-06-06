@@ -4,151 +4,127 @@
 \section{Background and Motivation}
 \label{sec:background_motivation}
 \begin{German}
-    Die Bauindustrie ist einer der grössten Wirtschaftszweige, doch ihre Produktivität stagniert seit Jahrzehnten. In den zwei Jahrzehnten von 1995 bis 2015 wuchs ihre Produktivität nur um 1\%, weit unter dem globalen Wirtschaftsdurchschnitt von 2.8\%. Als einer der Gründe wird die geringe Automatisierung genannt \cite{barbosaReinventingConstructionRoute2017}.
+    Die Bauindustrie ist einer der grössten Wirtschaftszweige, doch ihre Produktivität stagniert seit Jahrzehnten. In den zwei Jahrzehnten von 1995 bis 2015 wuchs ihre Produktivität nur um 1 \%, weit unter dem globalen Wirtschaftsdurchschnitt von 2.8 \% \cite{barbosaReinventingConstructionRoute2017}. Einer der Gründe ist die geringe Automatisierung.
 \end{German}
 \begin{English}
-    The construction industry is one of the largest economic sectors, yet its productivity has stagnated for decades. In the two decades from 1995 to 2015, its productivity grew by only 1\%, far below the global economy's average of 2.8\%. One of the reasons cited is the low level of automation \cite{barbosaReinventingConstructionRoute2017}.
+    The construction industry is one of the most significant economic sectors, yet its productivity has remained static for several decades. In the period spanning two decades from 1995 to 2015, the observed productivity growth was a mere 1 \%, a figure that falls considerably short of the global economic average of 2.8 \% \cite{barbosaReinventingConstructionRoute2017}. This phenomenon can be attributed, in part, to the limited automation present within the sector.
 \end{English}
 
 % Conventional Planning with CAD
 \begin{German}
-    Als einer der Gründe wird die geringe Automatisierung genannt. Bis zur Jahrtausendwende war die Bauplanung weitgehendst digitalisiert, insbesondere durch den Einsatz von Computer Aided Design (CAD) für die Erstellung von Bauzeichnungen. Es handelte sich um eine evolutionäre innovation, bei der die konventionelle planung optimiert wurde. Das manuelle Zeichnen am reissbrett wurde durch manuelles zeichnen am computer ersetzt, die einzelnen arbeitsschritte blieben weitgehnd dieselben. Bei der konventionelle planung wird ein reales objekt induktiv durch einzelne, zweidimensionale zeichnungen (z.B. grundriss, schnitt, detail) abgebildet. Die zeichnungen werden oft als isolierte dateien (z.B. dwg, dxf) gespeichert und sind dabei weder geometrisch noch semantisch miteinander verknüpft. änderungen am realen objekt müssen in allen zeichnungen manuell vorgenommen werden.
+    Zwar wurde die Bauplanung durch den Einsatz von Computer Aided Design (CAD) weitgehend digitalisiert, die Arbeitsschritte blieben jedoch weitgehend die selben \cite{eichlerBIMcertHandbuchGrundlagenwissen2023}. Die konventionelle Planung wurde damit lediglich optimiert. Die Geometrie eines pyhsischen Objekts wird induktiv durch einzelne, meist zweidimensionale Zeichnungen (z.B. Grundriss, Schnitt, Ansicht) abgebildet. Die einzelnen Zeichnungen sind meist isolierte Dateien, die weder geometrisch noch semantisch miteinander verknüpft sind. Änderungen müssen in den betroffenen Zeichnungen manuell vorgenommen werden. \cite{eichlerBIMcertHandbuchGrundlagenwissen2023}
 \end{German}
 
 \begin{English}
-    Until the turn of the millennium, construction planning had been largely digitized, primarily through the use of Computer-Aided Design (CAD) for creating construction drawings. This represented an evolutionary innovation, optimizing conventional planning methods. Manual drafting on the drawing board was replaced by manual drafting on the computer, while the individual work steps remained largely the same. In conventional planning, a real object is inductively represented by individual two-dimensional drawings (e.g., floor plan, section, detail). These drawings are often stored as isolated files (e.g., DWG, DXF) and are neither geometrically nor semantically linked. Any changes to the real object must be manually updated in all drawings.
+    Despite the substantial digitalisation of construction planning through the utilisation of computer-aided design (CAD), the fundamental work steps have remained relatively unaltered \cite{eichlerBIMcertHandbuchGrundlagenwissen2023}. Conventional planning was merely optimised. The geometry of a physical object is mapped inductively using individual, usually two-dimensional drawings (e.g. floor plan, section, elevation). The individual drawings are typically isolated files that are neither geometrically nor semantically linked to each other. Alterations require manual adjustments in the affected drawings. \cite{eichlerBIMcertHandbuchGrundlagenwissen2023}
 \end{English}
 
 % Model-Based Planning with BIM-Software
 \begin{German}
-    Ab der Jahrtausendwende begann sich Building Information Modelling (BIM) zu verbreiten. Es handelte sich um eine disruptive innovation, bei der die bisherigen arbeitsschritte grundlegend verändert wurden. Bei der modellbasierten planung wird ein dreidimensionales modell als digitales abbild des realen objekts erstellt. die zweidimensionalen zeichnungen werden anschliessend deduktiv aus dem modell abgeleitet. das modell wird als einheitliche datei (z.b. ifc) gespeichert und enthält sowohl geometrie als auch semantik. änderungen am modell werden automatisch in allen zeichnungen übernommen.
+    Erst die Einführung von Building Information Modeling (BIM) ermöglichte eine tiefgreifende Veränderung der Planungsmethodik \cite{eichlerBIMcertHandbuchGrundlagenwissen2023}. Durch BIM können Arbeitsprozesse grundlegend neu strukturiert werden. In der modellbasierten Planung werden neben der geometrischen Form auch semantische Informationen -- etwa zu Materialien oder Kosten -- in ein intelligentes 3D-Modell eingebunden. Verschiedene Fachdisziplinen fügen ihre Inhalte in ein gemeinsames Modell ein, was eine effizientere Zusammenarbeit über den gesamten Lebenszyklus eines Bauwerks ermöglicht. Aus dem Modell lassen sich deduktiv zweidimensionale Zeichnungen ableiten, beispielsweise für den Einsatz auf der Baustelle. Änderungen am Modell werden automatisch in diesen abgeleiteten Zeichnungen aktualisiert. \cite{eichlerBIMcertHandbuchGrundlagenwissen2023}
 
-    Vorreiterrollen bei der Implementierung von BIM haben die skandinavischen Länder sowie grossbritanien. die implementierung der technologie gestaltete sich in der schweiz schwierig. Im Jahr 2021 wurde gerademal bei 20\% der Schweizer Bauunternehmen BIM eingesetzt (DE: 70\%, UK: 80\%). Die schweiz befindet sich damit im europäischen vergleich knapp im durchschnitt. \cite{heinrichSchweizImBIMEuropavergleich2022}. Unter anderem führte die fragmentierte Bauwirtschaft und der hohhe wettbewerbsdruck dazu, dass besonders kleinere Unternehmen die anfänglich hohen investitionskosten scheuten. \cite{ivanicErfolgreicheEinfuehrungBuilding2020}.
+    Die Einführung von BIM verlief in der Schweiz zunächst zögerlich. Trotz des vorhandenen Produktivitätspotenzials nutzten im Jahr 2021 lediglich 20 \% der Schweizer Bauunternehmen Building Information Modeling \cite{heinrichSchweizImBIMEuropavergleich2022}. Gründe dafür sind die fragmentierte Struktur der Bauwirtschaft sowie ein hoher Preisdruck, wodurch insbesondere kleinere Unternehmen die anfänglich hohen Investitionskosten scheuten \cite{ivanicErfolgreicheEinfuehrungBuilding2020}.
 \end{German}
 
 \begin{English}
-    At the turn of the millennium, Building Information Modeling (BIM) began to gain traction. It represented a disruptive innovation that fundamentally changed previous workflows. In this context, BIM refers to both the technology (software) and the methodology (processes). In model-based planning, a three-dimensional model is created as a digital representation of the real object. The two-dimensional drawings are then deductively derived from the model. The model is stored as a unified file (e.g., IFC) and contains both geometry and semantics. Any changes made to the model are automatically reflected in all drawings.
+    The introduction of Building Information Modelling (BIM) enabled a profound change in planning methodology \cite{eichlerBIMcertHandbuchGrundlagenwissen2023}. BIM enables work processes to be restructured fundamentally. In model-based planning, semantic information -- such as that relating to materials or costs -- is integrated into an intelligent 3D model alongside the geometric form. Different specialist disciplines integrate their content into a common model, enabling more efficient collaboration throughout a building's entire life cycle. Two-dimensional drawings can be derived deductively from the model for use on the construction site, for example. Changes to the model are automatically updated in these drawings. \cite{eichlerBIMcertHandbuchGrundlagenwissen2023}
 
-    Scandinavian countries and the United Kingdom have taken leading roles in the implementation of BIM. However, integrating the technology in Switzerland has proven challenging. By 2021, only 20\% of Swiss construction companies had adopted BIM, compared to 70\% in Germany and 80\% in the UK. This places Switzerland slightly above the European average. \cite{heinrichSchweizImBIMEuropavergleich2022}. Among the factors contributing to this slow adoption are the fragmented nature of the construction industry and high competitive pressure, which led smaller companies, in particular, to shy away from the initially high investment costs. \cite{ivanicErfolgreicheEinfuehrungBuilding2020}. \
+    The introduction of BIM in Switzerland was initially hesitant. Despite the existing productivity potential, only 20 \% of Swiss construction companies were using Building Information Modelling in 2021 \cite{heinrichSchweizImBIMEuropavergleich2022}. This was due to the fragmented structure of the construction industry and high price pressure, which caused smaller companies in particular to shy away from the initially high investment costs \cite{ivanicErfolgreicheEinfuehrungBuilding2020}.
 \end{English}
 
 % Telecommunications Planning
 \begin{German}
-    Die Schweizer Telekommunikationsbranche hat das Potenzial der modellbasierten Planung erkannt. Während sich die traditionelle Bauwirtschaft typischerweise auf große, individuelle Bauvorhaben konzentriert, operiert die Telekommunikationsbranche mit einem hohen Volumen an kleineren, standardisierten Projekten, bei denen auf bestehenden Gebäuden Mobilfunkanlagen errichtet werden. Für die Planung solcher Vorhaben soll das jeweilige Gebäude effizient in ein digitales Modell überführt werden können.
+    Die Schweizer Telekommunikationsbranche hat das Potenzial der modellbasierten Planung erkannt. Für die Planung neuer Mobilfunkanlagen auf bestehenden Gebäuden, der sogennanten Rooftop-Standortplanung, soll zukünftig BIM eingesetzt werden. Im Gegensatz zur traditionellen Bauwirtschaft, die sich typischerweise auf grosse, individuelle Bauvorhaben konzentriert, ist die Standortplanung durch ein hohes Projektvolumen mit kleineren, weitgehend standardisierten Infrastruktureingriffen gekennzeichnet. Bereits geringe Effizienzsteigerungen einzelner Arbeitsschritte können sich hier über viele Projekte hinweg aufsummieren. Durch solche Skalenefekte gewinnen automatisierte Planungsprozesse zunehmend an Wirkung.
 \end{German}
 
 \begin{English}
-    The Swiss telecommunications industry has recognized the potential of model-based planning. While the traditional construction industry typically focuses on large, individual construction projects, the telecommunications sector operates with a high volume of smaller, standardized projects, involving the installation of mobile radio systems on existing buildings. For the planning of such projects, the respective building should be efficiently converted into a digital model.
+    The Swiss telecommunications industry has recognised the potential of model-based planning. In future, BIM is to be used for the planning of new mobile base stations on existing buildings, known as rooftop cell site planning. In contrast to the traditional construction industry, which typically focuses on large, individual construction projects, site planning is characterised by a high project volume with smaller, largely standardised infrastructure interventions. Even minor improvements in the efficiency of individual tasks can result in significant cumulative effects across a large number of projects. As a result of these economies of scale, automated planning processes are becoming increasingly impactful.
 \end{English}
 
 % Scan-to-BIM vs Scan-to-GIS
 \begin{German}
-    Dafür haben sich unterschiedliche Ansätze entwickelt, bei dem Gebäude mittels Reality Capture in digitale Modelle überführt werden können:
+    Einer dieser automatisierbaren Prozesse ist die digitale Erfassung von Gebäuden mittels Reality Capture. Dabei werden mit Verfahren wie Laserscanning oder Photogrammetrie präzise digitale Abbilder der physischen Umgebung erzeugt. Die daraus gewonnenen digitalen Modelle können als Grundlage für die Planung verwendet werden. Dabei haben sich zwei Ansätze zur Entwicklung digitaler Modelle etabliert:
 
     \begin{itemize}
-        \item \textbf{Scan-to-GIS:} Bei Scan-to-GIS wird ein Oberflächenmodell für die Nutzung in Geoinformationssystemen (GIS) erzeugt. Dieses Modell besteht häufig aus tausenden kleinen Dreiecken (Meshes), die geometrisch nicht logisch gegliedert sind. Es enthält keine semantischen Informationen wie Objektklassen oder Bauteileigenschaften und dient primär der Visualisierung und geobezogenen Analyse. Während die Generierung relativ schnell erfolgt, ist eine nachträgliche Bearbeitung oder Strukturierung aufwändig.
+        \item \textbf{Scan-to-Mesh:} Bei Scan-to-Mesh wird ein geometrisches Oberflächenmodell (Mesh) erzeugt. Dieses Modell besteht häufig aus tausenden kleinen Dreiecken, die geometrisch nicht logisch gegliedert sind. Es enthält keine semantischen Informationen wie Objektklassen oder Bauteileigenschaften und dient primär der Visualisierung. Während die Generierung relativ schnell erfolgt, ist eine nachträgliche Bearbeitung oder Strukturierung aufwändig. \cite{daiScan2MeshUnstructuredRange2019}
         
-        \textit{Analogie: Einscannen eines Textesdokuments geht schnell aber die nachträgliche Textbearbeitung ist schwierig.}
+        \textit{Analogie (eigene Darstellung): Scan-to-Mesh ist vergleichbar mit dem Einscannen eines Textdokuments als Bild. Der Inhalt ist zwar sichtbar, aber nicht strukturiert oder bearbeitbar.}
 
-        \item \textbf{Scan-to-BIM:} Bei Scan-to-BIM wird ein BIM-Modell für die Nutzung in BIM-Software erzeugt. Dieses Modell besteht aus logisch gegliederten Bauteilen und enthält semantische Informationen. Es dient der detaillierten Planung und Dokumentation von Bauwerken. Die Generierung ist aufwändiger als bei Scan-to-GIS, da die Modelle eine höhere geometrische Genauigkeit und semantische Struktur aufweisen müssen. Für die Standortplanung müssen Baupläne erstellt werden können, was die Bearbeitbarkeit voraussetzt. 
+        \item \textbf{Scan-to-BIM:} Bei Scan-to-BIM wird ein BIM-Modell für die Nutzung in BIM-Software erzeugt. Dieses Modell besteht aus logisch gegliederten Bauteilen und enthält semantische Informationen. Es dient der detaillierten Planung und Dokumentation von Bauwerken. Die Generierung ist aufwändiger als bei Scan-to-Mesh, da die Modelle eine höhere geometrische Genauigkeit und semantische Struktur aufweisen müssen. \cite{eichlerBIMcertHandbuchGrundlagenwissen2023}
         
-        \textit{Analogie: Das Abtippen eines Textdokumentes in einem Textbearbeitungsprogramm dauert länger, dafür kann anschliessend effizient damit gearbeitet werden.} 
+        \textit{Analogie (eigene Darstellung): Scan-to-BIM entspricht dem Abtippen des Textdokuments in einem Textbearbeitungsprogramm. Dies ist zwar aufwändiger, erlaubt aber eine nachträgliche Bearbeitbarkeit.} 
     \end{itemize}
 \end{German}
 
 \begin{English}
-    Various approaches have been developed for converting buildings into digital models using reality capture:
+    One such process that has the potential to be automated is the digital recording of buildings using reality capture. This process entails the generation of precise digital images of the physical environment through the utilisation of methodologies such as laser scanning or photogrammetry. The captured digital models provide a reliable data basis for subsequent planning processes. Two principal approaches have been established for the development of digital models:
 
     \begin{itemize}
-        \item \textbf{Scan-to-GIS:} Scan-to-GIS involves creating a surface model for use in Geographic Information Systems (GIS). This model often consists of thousands of small triangles (meshes) that are not logically structured geometrically. It lacks semantic information such as object classes or building component properties and is primarily used for visualization and geospatial analysis. While the generation process is relatively quick, subsequent editing or structuring is time-consuming.
+        \item \textbf{Scan-to-Mesh:} The Scan-to-mesh process involves the generation of a geometric surface model (mesh). This model frequently comprises thousands of small triangles that are not logically organised geometrically. The absence of semantic information, such as object classes or component properties, is a key feature of this approach, which is primarily employed for the purpose of visualisation. Whilst the initial generation of the data is relatively expeditious, subsequent editing or structuring is time-consuming. \cite{daiScan2MeshUnstructuredRange2019}
         
-        \textit{Analogy: Scanning a text document is quick, but editing the text afterwards is difficult.}
+        \textit{Analogy (author's own): Scan-to-Mesh is comparable to scanning a text document as an image. Despite the content being visible, it is not possible to structure or edit it.}
 
-        \item \textbf{Scan-to-BIM:} Scan-to-BIM involves creating a BIM model for use in BIM software. This model consists of logically structured building components and contains semantic information. It is used for detailed planning and documentation of buildings. Generation is more complex than with Scan-to-GIS, as the models must exhibit higher geometric accuracy and semantic structure. For site planning, building plans must be created, requiring editability.
+        \item \textbf{Scan-to-BIM:} Scan-to-BIM facilitates the generation of a BIM model for utilisation within the designated BIM software environment. The model is characterised by the logical organisation of its components and the incorporation of semantic information. The software is utilised for the purpose of meticulous planning and documentation of buildings. The generation process is more intricate than that of Scan-to-Mesh, as the models must possess a higher geometric accuracy and semantic structure. \cite{eichlerBIMcertHandbuchGrundlagenwissen2023}
         
-        \textit{Analogy: Retyping a text document in a word processing program takes longer, but efficient work can be done afterwards.}
+        \textit{Analogy (author's own): Scan-to-BIM is comparable to typing a text document into a word processing program. Despite the increased time investment, this approach facilitates subsequent editing.}
     \end{itemize}
 \end{English}
 
+\section{Research Gap}
+\label{sec:research_gap}
+\begin{German}
+    Für die Standortplanung müssen Bauteile nicht nur visualisiert, sondern auch gezielt anpassbar sein. Daher ist ein Scan-to-BIM-Verfahren erforderlich. In den vergangenen Jahren wurde Scan-to-BIM intensiv erforscht und weiterentwickelt \cite{rochaSurveyScantoBIMPractices2021}. Die gefundene Literatur scheint sich primär auf den klassischen Bausektor und die Dokumentation von historischen Gebäuden zu fokusieren. Publikationen, die sich speziell mit Scan-to-BIM für die Standortplanung beschäftigen, konnten keine gefunden werden. Ein möglicher Grund dafür könnte die begrenzte fachliche Relevanz über das Spezialgebiet hinaus sein. Das Anwendungsfled befindet sich in einem spezifischen Schnittstellengebiet zwischen den drei Disziplinen Telekommunikation, Geomatik und Bauwesen (siehe Abb. \ref{fig:intersection}).    
+    
+    Eine seperate Betrachtung ist aufgrund der individuellen Anforderungen aber sinnvoll. Für die Standortplanung werden keine Innenstrukturen benötigt, und die Fassadengeometrie kann stark vereinfacht dargestellt werden. Im Vergleich zu den Anforderungen der klassischen Baubranche sind die Rahmenbedingungen somit weniger komplex, wodurch eine einfachere Automatisierbarkeit ermöglicht wird -- ein Potenzial, das bislang vor allem in Scan-to-Mesh-Verfahren ausgeschöpft wurde.
 
+    
+\end{German}
+\begin{English}
+    For site planning, components must not only be visualised, but also specifically modifiable. This necessitates the implementation of a Scan-to-BIM workflow. In recent years, Scan-to-BIM has been extensively researched and further developed \cite{rochaSurveyScantoBIMPractices2021}. The extant literature appears to concentrate principally on the conventional construction sector and the documentation of historic buildings. Despite extensive research, no publications specifically addressing site planning were identified. One potential explanation for this phenomenon may be found in the perceived limited professional relevance of the subject beyond the confines of the specialised field. The application area is situated at a particular intersection of three distinct disciplines: telecommunications, geomatics, and construction (see Fig. \ref{fig:intersection}).
+
+    However, a separate consideration is warranted due to the distinct requirements of site planning. The necessity for interior structures is negated, and the geometry of the façade can be represented in a highly simplified form. In comparison to the requirements of the conventional building sector, the framework conditions are therefore less complex, which engenders greater potential for automation -- a potential that has primarily been realised in Scan-to-Mesh approaches.
+\end{English}
+
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}[every node/.style={align=center}]
+
+    % Graue Schnittfläche (Intersection)
+    \begin{scope}
+        \clip (-2,-0.3) ellipse (2.5 and 1.8);
+        \clip (2,-0.3) ellipse (2.5 and 1.8);
+        \clip (0,2.2) ellipse (2.5 and 1.8);
+        \fill[gray!60] (0,0) circle (5);
+    \end{scope}
+
+    % Ellipsen
+    \draw[thick] (-2,-0.3) ellipse (2.5 and 1.8);  % Geomatics
+    \draw[thick] (2,-0.3) ellipse (2.5 and 1.8);   % Construction
+    \draw[thick] (0,2.2) ellipse (2.5 and 1.8);    % Telecom
+
+    % Labels in Ellipsen
+    \node at (-2,-0.1) {\textbf{Geomatics}\\\textit{Reality Capture}};
+    \node at (2,-0.1) {\textbf{Construction}\\\textit{BIM}};
+    \node at (0,2.4) {\textbf{Telecommunications}\\\textit{Site Planning}};
+
+    \end{tikzpicture}
+    \caption{Intersection of Disciplines}
+    \label{fig:intersection}
+\end{figure}
+    
 \section{Research Objectives}
 \label{sec:research_objectives}
 \begin{German}
-    Sowohl BIM als auch Scan-to-BIM wurden in den letzten Jahren intensiv erforscht \cite{rochaSurveyScantoBIMPractices2021}. \\
-    Die bestehende Literatur für BIM ist sehr umfangreich. Es konnten zahlreiche Fachbücher und wissenschaftliche Publikationen gefunden werden. Speziell für Scan-to-BIM konnten hingegen keine Bücher aus wissenschaftlichen Fachverlagen identifiziert werden. Das Thema wurde in BIM-Fachbüchern nur oberflächlich behandelt. Die Literatur besteht hier primär aus wissenschaftlichen Publikationen. Oft angetroffene Anwendungen liegen im klassischen Bausektor und der Dokumentation von historischen Bauten. Publikationen, die sich speziell mit der Standortplanung der Telekommunikationsbranche beschäftigten konnten keine gefunden werden. Die Anforderungen an die zu generierenden Modelle unterscheiden sich nach Anwendung. Im klassischen Bausektor und bei historischen Bauten werden häufig sowohl die Innen- als auch die Aussenstrukturen modelliert. Bei der Standortplanung beschränkt sich die Modellierung hauptsächlich auf Aussenstrukturen und ähnelt damit Scan-to-GIS-Verfahren. Der Fokus liegt auf automatisierten Verfahren. \\
-
-    Zur begrifflichen Präzisierung des Forschungsziels werden zunächst zentrale Ablaufsbegriffe eingeführt. Diese Begriffe werden im Rahmen dieser Arbeit wie folgt verstanden:
-    
-    \begin{itemize}
-        \item \textbf{Workflow:} Ein Workflow ist eine Abfolge von Arbeitsschritten, die zur Erreichung eines Ziels durchgeführt werden. Auf strategischer Ebene soll technologieunabhängig geklärt werden, \textit{WAS}, \textit{WANN} und \textit{WARUM} gemacht wird.\\
-        \textit{Beispiel: Segmentierung}
-
-        \item \textbf{Framework:} Ein Framework ist die Abfolge von Methoden, die die Arbeitsschritte konkretisieren. Auf taktischer Ebene soll technologieunabhängig geklärt werden, \textit{WIE} die Arbeitsschritte durchgeführt werden. Methoden können dabei z.B. Algorithmen oder Verfahren sein.\\
-        \textit{Beispiel: Segmentierung durch polyfit-Algorithmus}
-        
-        \item \textbf{Toolchain:} Die Toolchain ist die Abfolge von Tools, mit denen die Methoden implementiert werden. Auf operativer Ebene soll technologieabhängig geklärt werden, \textit{WOMIT} die Arbeitsschritte durchgeführt werden. Tools können z. B. Software, Skripte oder Plattformen sein.\\
-        \textit{Beispiel: Segmentierung durch in Python implementierter polyfit-Algorithmus}
-    \end{itemize}
-
-% Forschung durch Entwerfen = Reasearch by Design
-
-    In einem ersten Schritt soll mittels der Methodik "Forschung durch Entwerfen" ein auf die Standortplanung zugeschnittenes Framework entwickelt werden. Dafür sollen bestehende Workflows und Methoden aus der Forschung herangezogen werden. In einem zweiten Schritt soll für das Framework eine operativ ausführbare Toolchain entwickelt und dieses dann implementiert werden.
-
-% Hauptfrage: Was will ich wissen?
-% Unterfrage: Wie finde ich es heraus?
-
-    \begin{itemize}
-        \item \textbf{Hauptfrage:} Wie kann der Scan-to-BIM-Workflow für die Standortplanung in der Telekommunikationsbranche automatisiert werden?
-        \begin{itemize}
-            \item \textbf{Unterfrage 1:} Welche Methoden sind für die Entwicklung eines automatisierten Scan-to-BIM-Frameworks für die Standortplanung geeignet?
-            \item \textbf{Unterfrage 2:} Welche Tools sind für die Entwicklung einer automatisierten Scan-to-BIM-Toolchain für die Standortplanung geeignet?
-        \end{itemize}
-    \end{itemize}
+    Ziel dieser Arbeit ist die Entwicklung eines automatisieren Scan-to-BIM-Verfahrens für die Standortplanung. Das Verfahren soll eine Punktwolke, also eine Menge räumlicher Messpunkte, einer Gebäudeaussenfläche in ein BIM-Modell überführen. Aus dem Modell soll wiederum ein Baueingabeplan, der den behördlichen Anforderungen genügt, sowie eine Animation abgeleitet werden können. Daraus lassen sich folgende Forschungsfragen ableiten:
 \end{German}
-
 \begin{English}
-    Both BIM and Scan-to-BIM have been intensively researched in recent years \cite{rochaSurveyScantoBIMPractices2021}. \\
-    The existing literature on BIM is extensive, with numerous textbooks and scientific publications available. However, no books from scientific publishers could be identified specifically for Scan-to-BIM. The topic has only been superficially covered in BIM textbooks, with the literature primarily consisting of scientific publications. Common applications are found in the traditional construction sector and the documentation of historical buildings. No publications specifically addressing site planning in the telecommunications industry could be found. The requirements for the generated models vary depending on the application. In the traditional construction sector and historical buildings, both interior and exterior structures are often modeled. In site planning, modeling is mainly limited to exterior structures, resembling Scan-to-GIS procedures. The focus is on automated procedures. \\
-
-    To clarify the research objective, central workflow terms are introduced. These terms are understood as follows in this work:
-
-    \begin{itemize}
-        \item \textbf{Workflow:} A workflow is a sequence of work steps performed to achieve a goal. At the strategic level, it clarifies technology-independent \textit{WHAT}, \textit{WHEN}, and \textit{WHY} is done.\\
-        \textit{Example: Segmentation}
-
-        \item \textbf{Framework:} A framework is the sequence of methods that concretize the work steps. At the tactical level, it clarifies technology-independent \textit{HOW} the work steps are performed. Methods can include algorithms or procedures.\\
-        \textit{Example: Segmentation by polyfit algorithm}
-
-        \item \textbf{Toolchain:} The toolchain is the sequence of tools used to implement the methods. At the operational level, it clarifies technology-dependent \textit{WITH WHAT} the work steps are performed. Tools can include software, scripts, or platforms.\\
-        \textit{Example: Segmentation by polyfit algorithm implemented in Python}
-    \end{itemize}
-
-    In a first step, a framework tailored to site planning will be developed using the "Research by Design" methodology. Existing workflows and methods from research will be used for this purpose. In a second step, an operationally executable toolchain will be developed for the framework and implemented.
-
-    \begin{itemize}
-        \item \textbf{Main Question:} How can the Scan-to-BIM workflow for site planning in the telecommunications industry be automated?
-        \begin{itemize}
-            \item \textbf{Sub-Question 1:} Which methods are suitable for developing an automated Scan-to-BIM framework for site planning?
-            \item \textbf{Sub-Question 2:} Which tools are suitable for developing an automated Scan-to-BIM toolchain for site planning?
-        \end{itemize}
-    \end{itemize}
+    The aim of this thesis is to develop an automated Scan-to-BIM process for cell site planning. The process is designed to convert a point cloud, i.e. a set of spatial measurement points, of a building exterior into a BIM model. Consequently, it should be feasible to derive a permit drawing that meets regulatory requirements, as well as a visualization, from the model. The following research questions can be derived from this:
 \end{English}
 
-\section{Thesis Structure}
-\begin{German}
-    Für die Beantwortung der Fragestellungen wird die Arbeit in zwei Teile untergliedert. Dabei widmet sich jeder Teil der Beantwortung einer Fragestellung:
-
     \begin{itemize}
-        \item \textbf{Teil 1:} Im ersten Teil soll mit einer vergleichenden Analyse die erste Fragestellung beantwortet werden. In Kapitel 2 wird zunächst eine Einführung in die drei Themenblöcke Mobilfunk, BIM und Scan-to-BIM gegeben. Es soll damit eine Basis für den zweiten Teil geschaffen werden. Im Kaptiel 3 erfolgt die eigentliche Analyse. Einige der in Kapitel 2 vorgestellten Scan-to-BIM-Technologien werden genauer untersucht und auf ihre Eignung beurteilt. Auf dieser Grundlage wird ein konkretes Framework entwickelt.
-        \item \textbf{Teil 2:} Im zweiten Teil soll das entwickelte Framework auf ein praxisnahes Fallbeispiel angewendet werden. Dafür wird im Kapitel 4 zunächst das Ausgangsproblem identifiziert. Im Kapitel 5 wird anschliessend auf die Resultate der Implementierung eingegangen. Abschliessend werden im Kapitel 6 die Ergebnisse zusammengefasst und ein Ausblick auf zukünftige Forschung gegeben.
-    \end{itemize} 
-\end{German}
-
-\begin{English}
-    To address the research questions, this thesis is divided into two parts, with each part focusing on one of the research questions:
-
-    \begin{itemize}
-        \item \textbf{Part 1:} The first part aims to answer the first research question through a comparative analysis. Chapter 2 provides an introduction to the three main topics of telecom, BIM, and Scan-to-BIM, laying the foundation for the subsequent analysis. Chapter 3 delves into the analysis itself, examining several Scan-to-BIM technologies introduced in Chapter 2 and evaluating their suitability. Based on this analysis, a concrete framework is developed.
-        \item \textbf{Part 2:} The second part involves applying the developed framework to a practical case study. Chapter 4 identifies the initial problem, while Chapter 5 discusses the results of the implementation. Finally, Chapter 6 summarizes the findings and provides an outlook on future research.
+        \item \textbf{Main Question:} How can Scan-to-BIM be automated for telecom rooftop site planning?
+        \begin{itemize}
+            \item \textbf{Sub-Question 1:} Which steps of Scan-to-BIM can be automated for telecom rooftop site planning?
+            \item \textbf{Sub-Question 2:} Which tools enable Scan-to-BIM automation for telecom rooftop site planning?
+        \end{itemize}
     \end{itemize}
-\end{English}

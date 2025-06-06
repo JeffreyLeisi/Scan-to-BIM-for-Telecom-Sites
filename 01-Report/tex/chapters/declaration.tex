@@ -1,4 +1,7 @@
-% TODO Add title, student first/last name, supervisor first/last name.
+% deactivte intent
+\newlength{\oldparindent}
+\setlength{\oldparindent}{\parindent}
+\setlength{\parindent}{0pt}
 
 \section*{Declaration of Originality}
 
@@ -13,7 +16,7 @@ I hereby declare that the written work I have submitted entitled
 
 \vspace{0.5cm}
 
-is original work which I alone have authored and which is written in my own words.\footnote{Co-authored work: The signatures of all authors are required. Each signature attests to the originality of the entire piece of written work in its final form.}
+is original work which I alone have authored and which is written in my own words.\footnote{The language used in this thesis were supported by AI-based tools (e.g., DeepL, ChatGPT, Copilot) to improve clarity and consistency in English expression. All content and ideas remain my own.}
 
 \vspace{1cm}
 
@@ -23,7 +26,7 @@ is original work which I alone have authored and which is written in my own word
 
 \begin{tabular}{ p{5cm} p{5cm} }
 % TODO Add student first/last name
-  Jeffrey & Leisi \\
+  Jeffrey Leisi & ETH Zürich \\
 \end{tabular}
 
 \vspace{0.5cm}
@@ -34,13 +37,15 @@ is original work which I alone have authored and which is written in my own word
 
 \begin{tabular}{ p{5cm} p{5cm} }
 % TODO Add supervisor first/last name
-  Océane & Durand-Maniclas \\
-  Kasimir & Forth \\
+  Prof. Dr. Catherine De Wolf & ETH Zürich \\
+  Dr. Kasimir Forth & ETH Zürich \\
+  Océane Durand-Maniclas & ETH Zürich \\
+  Jean-Charles Schaegis & Axians Schweiz AG \\
 \end{tabular}
 
 \vspace{0.5cm}
 
-With the signature I declare that I have been informed regarding normal academic citation rules and that I have read and understood the information on 'Citation etiquette' (\url{https://www.ethz.ch/content/dam/ethz/main/education/rechtliches-abschluesse/leistungskontrollen/plagiarism-citationetiquette.pdf}).
+With the signature I declare that I have been informed regarding normal academic citation rules and that I have read and understood the information on \href{https://www.ethz.ch/content/dam/ethz/main/education/rechtliches-abschluesse/leistungskontrollen/plagiarism-citationetiquette.pdf}{Citation etiquette}.
 The citation conventions usual to the discipline in question here have been respected.
 
 \vspace{0.5cm}
@@ -53,3 +58,6 @@ The above written work may be tested electronically for plagiarism.
   \cline{1-1} \cline{3-3}
   Place and date & & Signature \\
 \end{tabular}
+
+%reset intent
+\setlength{\parindent}{\oldparindent}

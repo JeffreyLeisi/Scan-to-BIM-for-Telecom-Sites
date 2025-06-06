@@ -1,6 +1,54 @@
 \chapter{Results}
 \label{sec:results}
 
-\section{Introduction}
-TODO: Provide a brief introduction to the chapter.
+% Baueingabeplan = permit drawing
 
+\begin{German}
+    In diesem Kapitel werden die Ergebnisse der Fallstudie präsentiert. Es wird aufgezeigt, was durch die Anwendung des Frameworks entstanden ist. Primärresultat ist das BIM-Modell, das aus einer Punktwolke abgeleitet wurde. Sekundärresultate sind der Baueingabeplan und eine Animation, die aus dem BIM-Modell abgeleitet wurden.
+\end{German}
+
+\begin{English}
+    This chapter presents the results of the case study. It shows what has been created through the application of the framework. The primary result is the BIM model derived from a point cloud. Secondary results include the permit drawing and an animation derived from the BIM model.
+\end{English}
+
+\section{BIM-Model}
+\begin{German}
+    Das IFC-Modell des fünfstöckigen Wohngebäudes mit ungefähren Abmessungen von 28~$\times$~17~$\times$~16~m (Länge~$\times$~Breite~$\times$~Höhe) besteht aus insgesamt 14 Bauteilen. Darunter befinden sich neun Wände (\texttt{IfcWall}), vier Deckenplatten (\texttt{IfcSlab}) und ein Dach (\texttt{IfcRoof}).
+
+    Die Bauteile sind als zweidimensionale Flächen im dreidimensionalen Raum modelliert. Die Bodenplatte liegt in der XY-Ebene auf Höhe 0. Als Längeneinheit wurde Millimeter verwendet. Die Bauteile sind nicht parametrisch modelliert; ihre Geometrie kann im Modell nicht direkt verändert werden.
+
+    Die erzeugte Geometrie ist \emph{manifold} und \emph{watertight}, das heißt topologisch konsistent und geschlossen. Das Modell entspricht einem Detailierungsgrad nach LOD~200.
+
+    Für das manuell verbesserte BIM-Modell wurden 8 Balkonbrüstungen, 24 Fenster, 1 Türe, 1 Dachaufbau sowie 2 Antennenmasten inkl. RAN-Equipment hinzugefügt. Eine der vordefinierten Fensterfamilie konnte in die IFC-Wände integriert werden, weshalb auf eine Parametrsierung verzichtet wurde. Da die Dachplatte nicht perfekt horizontal ist, wurden die Gehwegplatten in diskreten Höhenstufen dem Plattenverlauf angepasst. Das Umgebungsmodell stellt den ungefähren Terrainverlauf sowie stark generalisierte Gebäude in der Umgebung dar.
+\end{German}
+
+\begin{English}
+    The IFC model of the five-story residential building, with approximate dimensions of 28~$\times$~17~$\times$~16~m (length~$\times$~width~$\times$~height), consists of a total of 14 components. Among these are nine walls (\texttt{IfcWall}), four slabs (\texttt{IfcSlab}), and one roof (\texttt{IfcRoof}).
+
+    The components are modeled as two-dimensional surfaces in three-dimensional space. The ground slab lies in the XY-plane at height 0. Millimeters were used as the length unit. The components are not parametrically modeled; their geometry cannot be directly modified in the model.
+
+    The generated geometry is \emph{manifold} and \emph{watertight}, meaning it is topologically consistent and closed. The model corresponds to a Level of Detail (LOD) of 200.
+
+    For the manually improved BIM model, 8 balcony railings, 24 windows, 1 door, 1 roof structure, and 2 antenna masts including RAN equipment were added. One of the predefined window families could be integrated into the IFC walls, so parameterization was omitted. Since the roof slab is not perfectly horizontal, the pavement slabs were adjusted to the slab's course in discrete height steps. The surrounding model represents the approximate terrain and strongly generalized buildings in the vicinity.
+\end{English}
+
+\section{Permit Drawing}
+\begin{German}
+    Der Baueingabeplan wurde aus dem generierten BIM-Modell abgeleitet und entspricht der derzeitigen Branchenpraxis in der Schweiz. Es wurde ein Planlayout im Format A3 gewählt, bestehend aus einer Draufsicht sowie zwei Ansichten im Massstab 1:200. Zusätzlich wurden zwei gerenderte Visualisierungen zur Veranschaulichung eingefügt.
+
+    Die Gebäudedimensionen wurden vollständig vermasst. Die Position des Mastzentrums wurde vom Gebäuderand aus eingemessen. Auf eine sektorale Bezeichnung der Hauptstrahlrichtungen wurde verzichtet. Der Plankopf basiert auf einer Standardvorlage aus Autodesk und wurde nicht angepasst.
+\end{German}
+
+\begin{English}
+    The permit drawing was derived from the BIM model and corresponds to the current industry practice in Switzerland. An A3 layout was chosen, consisting of a plan view and two elevations at a scale of 1:200. Additionally, two rendered visualizations were included.
+
+    The building dimensions were dimensioned. The mast center was measured from the building edge. Sector designation for the main beam directions was omitted. The plan header comes from an Autodesk template, and the plan header data was not modified.
+\end{English}
+\section{Animation}
+\begin{German}
+    Die \href{https://n-joy-nas.quickconnect.to/d/s/13WdvrDK9DU26WWH7K7YgObwbntu93YO/ulhFUyCAh7bS6LBXbd99r1QpgsKEpiXI-37SgdYNkTww}{Animation} zeigt einen Kamerarundgang um das modellierte Gebäude. Aufgrund technischer Einschränkungen konnte das Umgebungsmodell nicht gerendert werden. Die verwendeten Texturen sind einfach gehalten, ermöglichen jedoch eine grundlegende räumliche Darstellung der Gesamtszenerie.
+\end{German}
+
+\begin{English}
+    The \href{https://n-joy-nas.quickconnect.to/d/s/13WdvrDK9DU26WWH7K7YgObwbntu93YO/ulhFUyCAh7bS6LBXbd99r1QpgsKEpiXI-37SgdYNkTww}{animation} shows a camera tour around the modeled building. Due to technical limitations, the surrounding model could not be rendered. The textures used are simple but allow for a basic spatial representation of the overall scene.
+\end{English}
