@@ -14,18 +14,144 @@
     A comprehensive evaluation of the case study was excluded from the beginning due to time constraints. A ground-truth validation of the model did not take place. Therefore, the evaluation was limited to the following three aspects:
 \end{English}
 
-\subsection{PolyFit Runtime Analysis}
+\subsection{PolyFit Analysis}
 \begin{German}
-    Um das Verhalten des PolyFit-Algorithmus zu analysieren, wurde während der Entwicklungsphase eine Laufzeitanalayse durchgeführt. Diese wurde auf einem Intel Core i7-9700K 3.60~GHz Prozessor mit 32~GB RAM durchgeführt. Die Laufzeit wurde für verschiedene Punktwolken-Grössen gemessen.
+    Um das Verhalten von PolyFit zu verstehen, wurde während der Entwicklungsphase eine Analyse durchgeführt. Als unabhängige Grösse wurde die Punktanzahl der Punktwolke variiert. Gemessen wurde die Punktdichte, die Laufzeit sowie die Anzahl der Flächen des generierten Modells (siehe \nameref{app:polyfit}). Diese wurde auf einem Intel Core i7-9700K 3.60~GHz Prozessor mit 32~GB RAM durchgeführt.
+    
+    Zur Bestimmung der Punktdichte wurde zunächst der durchschnittliche Abstand zu den jeweils vier nächsten Nachbarn pro Punkt berechnet. Anschliessend wurde die mittlere Laufzeit sowie deren Standardabweichung bestimmt, die PolyFit für die Rekonstruktion benötigte. Dafür wurde eine Messreihe mit fünf Messungen durchgeführt. Für die jeweils letzte Messung der Messreihe wurde das generierte Modell untersucht. Es wurde visualisiert und die Anzahl der in die Optimierungsaufgabe eingebrachten Flächen als auch die Anzahl der resultierenden Flächen dokumentiert.
 
-    ...
+    Die Ergebnisse der Analyse wurde für die mittlere Laufzeit und die Flächenanzahl der Modelle visualisiert (siehe Abb. \ref{fig:polyfit_analysis}). Die mittlere Laufzeit steigt mit zunehmender Punktanzahl superlinear an. Die Varianz der Laufzeit sowie die Anzahl der Modellflächen wachsen mit der Punktanzahl an. Grundsätzlich konnte beobachtet werden, dass eine höhere Punktdichte zu komplexeren Modellen führte. Ab einer Punktanzahl von über 100'000 stieg die Laufzeit auf über eine Minute an während die Modellqualität aufgrund zu komplexer Geometrie wieder abnahm. Bei hohen Punktdichten wurden zudem eine hoher Varianz sowohl in der Laufzeit als auch der Anzahl der rekonstuierten Flächen beobachtet. Die subjektiv besten Ergebnisse bei noch tiefer Varianz konnten bei einer Puktanzahl von 70'000 bis 90'000 Punkten beobachtet werden. Dies entsprach einer Punktdichte von 6 bis 7 cm. Die Ergebnisse liesen sich nicht direkt auf die anderen getesteten Gebäude übertragen und mussten individuell bestimmt werden. Es konnte kein Set an Parameter gefunden werden, das für unterschiedliche Gebäude zu zuverlässig guten Ergebnissen führte.
 \end{German}
 
 \begin{English}
-    To analyze the behavior of the PolyFit algorithm, a runtime analysis was conducted during the development phase. This was performed on an Intel Core i7-9700K 3.60~GHz processor with 32~GB RAM. The runtime was measured for various point cloud sizes.
+    To understand the behavior of PolyFit, an analysis was conducted during the development phase. The independent variable was varied by changing the point count of the point cloud. The measured variables included point density, runtime, and the number of faces in the generated model (see \nameref{app:polyfit}). This analysis was performed on an Intel Core i7-9700K 3.60~GHz processor with 32~GB RAM.
 
-    ...
+    To determine point density, the average distance to the four nearest neighbors for each point was first calculated. Then, the mean runtime and its standard deviation required by PolyFit for reconstruction were determined. A measurement series with five measurements was conducted for each point count. For the last measurement in each series, the generated model was examined. It was visualized, and both the number of faces introduced into the optimization task and the number of resulting faces were documented.
+
+    The results of the analysis were visualized for mean runtime and face count of the models (see Fig. \ref{fig:polyfit_analysis}). The mean runtime increases superlinearly with increasing point count. The variance in runtime and the number of model faces also increase with point count. Generally, it was observed that a higher point density led to more complex models. Above a point count of approximately 110,000, the runtime exceeded one minute while model quality decreased due to overly complex geometry. At high point densities, a high variance in both runtime and number of reconstructed faces was also observed. The subjectively best results with lower variance could be seen at a point count between 70,000 and 90,000 points, corresponding to a point density of 6 to 7 cm. The results could not be directly transferred to other tested buildings and had to be determined individually. No set of parameters was found that consistently led to good results across different buildings.
 \end{English}
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=14cm,
+    height=8cm,
+    xlabel={Point Count},
+    ylabel={Mean Runtime [s] (blue)},
+    grid=both,
+    grid style={line width=.1pt, draw=gray!20},
+    major grid style={line width=.2pt,draw=gray!50},
+    tick align=outside,
+    tick pos=left,
+    enlargelimits=0.02,
+    legend style={at={(0.5,-0.25)}, anchor=north, legend columns=3},
+    ymajorgrids=true,
+    xmajorgrids=true,
+]
+
+% Erster Plot: mittlere Laufzeit
+\addplot[
+    color=blue,
+    mark=*,
+    thick
+] coordinates {
+    (44774,0.85)
+    (47154,0.91)
+    (48074,0.90)
+    (49276,0.89)
+    (51354,0.95)
+    (53198,1.16)
+    (54552,1.10)
+    (56440,1.38)
+    (58238,1.68)
+    (60179,1.36)
+    (63150,1.62)
+    (66180,1.51)
+    (68259,1.61)
+    (70557,2.44)
+    (73418,1.88)
+    (75839,2.77)
+    (77846,4.10)
+    (80395,4.31)
+    (83509,10.11)
+    (87058,12.38)
+    (91913,14.23)
+    (93549,9.71)
+    (97755,10.10)
+    (101631,32.70)
+    (106131,25.32)
+    (109461,63.05)
+    (116282,78.45)
+    (119312,73.35)
+    (123909,63.68)
+    (128939,134.52)
+    (135094,173.54)
+    (140435,211.82)
+};
+\end{axis}
+
+% Zweite Achse rechts
+\begin{axis}[
+    width=14cm,
+    height=8cm,
+    xlabel={},
+    ylabel={Reconstructed Model Faces (yellow)},
+    axis y line*=right,
+    axis x line=none,
+    tick align=outside,
+    tick pos=right,
+    enlargelimits=0.02,
+    ymin=0, % <<< Untere Grenze auf 0 setzen
+    legend style={at={(0.5,-0.25)}, anchor=north, legend columns=-1},
+    ymajorgrids=false,
+]
+
+% Zweiter Plot: Anzahl der Flächen
+\addplot[
+    color=yellow,
+    mark=*,
+    thick
+] coordinates {
+    (44774,6)
+    (47154,6)
+    (48074,6)
+    (49276,6)
+    (51354,6)
+    (53198,13)
+    (54552,6)
+    (56440,15)
+    (58238,15)
+    (60179,13)
+    (63150,13)
+    (66180,15)
+    (68259,8)
+    (70557,11)
+    (73418,11)
+    (75839,12)
+    (77846,15)
+    (80395,13)
+    (83509,14)
+    (87058,15)
+    (91913,15)
+    (93549,15)
+    (97755,19)
+    (101631,16)
+    (106131,16)
+    (109461,23)
+    (116282,20)
+    (119312,15)
+    (123909,16)
+    (128939,28)
+    (135094,23)
+    (140435,17)
+};
+
+\end{axis}
+\end{tikzpicture}
+\caption{PolyFit Analysis}
+\label{fig:polyfit_analysis}
+\end{figure}
 
 \subsection{Model Quality}
 \begin{German}
